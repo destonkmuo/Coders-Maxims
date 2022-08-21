@@ -1,0 +1,43 @@
+html {
+    margin: 0;
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    transition: 1s;
+    background-color: darkslategray;
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+}    
+
+@keyframes fadeInAnimation {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+  
+  /* Track */
+::-webkit-scrollbar-track {
+    background: rgba(47,79,79,255);
+}
+  
+  /* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgba(47,55,55,255);
+}
+  
+  /* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(47,60,60,255);
+}

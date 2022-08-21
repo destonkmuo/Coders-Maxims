@@ -1,5 +1,5 @@
-var navList = document.getElementsByClassName('list_ns');
-
+var navList = document.getElementsByClassName('list-ns');
+var button = document.getElementById('low-nav-width-btn');
 var width, height;
 
 window.onresize = window.onload = function() {    
@@ -8,11 +8,16 @@ window.onresize = window.onload = function() {
     if(width < 1225) {
         for (let i = 1; i < navList.length - 1; i++) {
         navList[i].style.display = "none";
+        button.style.display = "block";
         }
     } else {
         for (let i = 1; i < navList.length - 1; i++) {
             navList[i].style.display = "block";
+            button.style.display = "none";
         }
     }
 }
 
+button.onclick = function() {
+    console.log("nav opened");
+}

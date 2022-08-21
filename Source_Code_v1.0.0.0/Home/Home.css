@@ -1,28 +1,4 @@
-html {
-    margin: 0;
-    animation: fadeInAnimation ease 3s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-}
-
-body {
-    margin: 0;
-    padding: 0;
-    transition: 1s;
-    background-color: darkslategray;
-    overflow-x: hidden; /* Hide horizontal scrollbar */
-}    
-
-@keyframes fadeInAnimation {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-}
-
-#dark_mode_button {
+#dark-mode-button {
     position: fixed;
     margin-top: 2vh;
     margin-left: 1.5vw;
@@ -32,11 +8,11 @@ body {
     background-color: black;
 }
 
-#dark_mode_button:hover {
+#dark-mode-button:hover {
     opacity: 75%;
 }
 
-#dark_mode_slider {
+#dark-mode-slider {
     position: fixed;
     margin-left: -.3vw;
     margin-top: -3.2vh;
@@ -129,8 +105,8 @@ body {
 }
 
 #HeaderLogo {
-    margin-right: 2.3rem;
-    width: 25vw; 
+    margin-right: 2.15rem;
+    width: 28vw; 
 }
 
 #HeaderLogo:hover {
@@ -141,7 +117,7 @@ body {
     list-style: none;
 }
 
-.nav_list {
+.nav-list {
     position: fixed;
     display: flex;
     justify-content: center;
@@ -153,11 +129,11 @@ body {
     list-style: none;
 }
 
-.nav_list li a:hover {
+.nav-list li a:hover {
     color: #7ce6f0;
 }
 
-.nav_list li a {
+.nav-list li a {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     list-style: none;
     margin-right: 2rem;
@@ -165,4 +141,113 @@ body {
     text-decoration: none;
     font-weight: bold;
     color: white;
+}
+
+#low-nav-width-btn {
+    display: none;
+    position: fixed;
+    margin-top: 93vh;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    margin-left: 48%;
+    padding: 0;
+    border: none;
+    background: none;
+    color: white;
+    font-size: 6vh;
+}
+
+#low-nav-width-btn:hover {
+    opacity: 75%;
+}
+
+.low-nav-width-drop-down{
+    display:inline-block;
+    position:relative;
+    margin-top: 2%;
+}
+
+.low-nav-width-drop-down button:focus{
+    border:none;
+    padding:8px 16px;
+    background-color:grey;
+    color:black;
+    transition:.3s;
+}
+
+.low-nav-width-drop-down:hover button{
+    background-color:grey;
+}
+
+.low-nav-width-drop-down div{
+    justify-content: center;
+    align-items: center;
+    background-color:#fff;
+    box-shadow:0 4px 8px rgba(0,0,0,0.2);
+    z-index:1;
+    visibility:hidden;
+    position:fixed;
+    margin-top:55vh;
+    width:40vw;
+    height:50vh;
+    opacity:0;
+    transition: 300ms ease-in-out;
+    border-radius:10px 10px 10px 10px;
+
+}
+
+.low-nav-width-drop-down:hover div{
+    visibility:visible;
+    opacity:1;
+    transform: translateY(-50px);
+    transition: opacity 300ms ease-in-out, transform 300ms ease-in-out;
+}
+
+
+.low-nav-width-drop-down div a{
+    display:block;
+    text-decoration:none;
+    padding:8px;
+    transition:.1s;
+    white-space:nowrap;
+    color: black;
+    
+}
+
+.low-nav-width-drop-down div a:hover{
+    color:black;
+}
+
+.low-width-nav-list {
+    position: fixed;
+    flex: 1;
+    height: 60px;
+    font-size: 2.6vw;
+    list-style: none;
+    margin: 0 auto;
+    list-style-type: none;
+    padding: 1vh 11.8vw;
+}
+
+.low-width-nav-list li a:hover {
+    color: #7ce6f0;
+}
+
+.low-width-nav-list li a {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    transition: all 400ms ease;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    list-style: none;
+    justify-content: center;
+    text-align:center;
+}
+
+#drop-down-content {
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    margin-left: 32%;
 }

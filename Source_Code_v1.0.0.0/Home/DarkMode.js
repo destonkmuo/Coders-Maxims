@@ -1,6 +1,6 @@
-var darkModeSlider = document.getElementById('dark_mode_slider');
-var darkModeButton = document.getElementById('dark_mode_button');
-//var btnPrimary = document.getElementsByClassName('btn_primary');
+var darkModeSlider = document.getElementById('dark-mode-slider');
+var darkModeButton = document.getElementById('dark-mode-button');
+//var btnPrimary = document.getElementsByClassName('btn-primary');
 var body = document.body;
 
 
