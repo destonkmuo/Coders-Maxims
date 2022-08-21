@@ -2,11 +2,12 @@
 <html lang="en-US">
    <head>
       <title>Coders Maxims</title>
-      <link rel="stylesheet" href="Home.css">
-      <link rel="stylesheet" href="/Source_Code_v1.0.0.0/PageAttributes.css">
+      <link rel="stylesheet" href="Home.html">
+      <link rel="stylesheet" href="/Source_Code/PageAttributes.css">
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <script src="/Source_Code_v1.0.0.0/Home/JavaScript/Search.js"></script>
    </head>
    <body>
       <main>
@@ -31,9 +32,9 @@
                   <div class="search-box" id="search-button">
                      <button class="btn-search">
                      <img src="Static/SearchLogo.png" id="SearchLogo"></img>
-                     <i class="fas fa-search"></i>
                      </button>
-                     <input type="text" id="input-search" placeholder="Search...">
+                     <i class="fa fa-search" aria-hidden="true"></i>
+                     <input type="text" name="" id="input-search" onkeyup='Search()' placeholder="Search...">
                   </div>
                   <!-- Alternating "Search... "[Module Names EX:If Loop]" randomly from the Module json, Deletes its self and replaces it by the character-->
                </li>
@@ -64,5 +65,5 @@
       </div>
    </body>
    <!--<script src="DarkMode.js"></script> Add A Color Changer, Everything But White-->
-   <script src="LowNavWidth.js"></script>
+   <script src="/Source_Code/Home/JavaScript/LowNavWidth.js"></script>
 </html>

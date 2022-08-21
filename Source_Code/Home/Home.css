@@ -146,7 +146,7 @@
 #low-nav-width-btn {
     display: none;
     position: fixed;
-    margin-top: 93vh;
+    margin-top: 92vh;
     justify-content: center;
     align-items: center;
     flex: 1;
@@ -203,7 +203,6 @@
     transform: translateY(-50px);
     transition: opacity 300ms ease-in-out, transform 300ms ease-in-out;
 }
-
 
 .low-nav-width-drop-down div a{
     display:block;

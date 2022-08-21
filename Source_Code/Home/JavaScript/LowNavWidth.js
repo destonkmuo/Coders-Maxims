@@ -1,5 +1,6 @@
 var navList = document.getElementsByClassName('list-ns');
 var button = document.getElementById('low-nav-width-btn');
+var dropDown = document.getElementsByClassName('low-nav-width-drop-down')
 var width, height;
 
 window.onresize = window.onload = function() {    
@@ -19,5 +20,5 @@ window.onresize = window.onload = function() {
 }
 
 button.onclick = function() {
-    console.log("nav opened");
+    dropDown[0].style.visibility = "visible";
 }
