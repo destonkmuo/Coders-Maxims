@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Coders Maxims</title>
+
+    <link rel="stylesheet" href="Home.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  </head>
+
+  <body>
+    <header class="header"> <!-- Contains the CodersMaxims Logo-->
+
+    <nav class="nav"> <!-- Contains Home (Dev Notes), Modules, Overview, Resources, Projects, References [API], About Me, Contact -->
+      <ul class="nav_list">
+        <li class="list_ns"><a href="Home.html"><img src="Static/CodersMaximsLogo.png" id="HeaderLogo"></img></a></li>
+        <li class="list_ns"><a href="Home.html">Home</a></li>
+        <li class="list_ns"><a href="#">Modules</a></li>
+        <li class="list_ns"><a href="#">Overview</a></li>
+        <li class="list_ns"><a href="#">Resources</a></li>
+        <li class="list_ns"><a href="#">Projects</a></li>
+        <li class="list_ns"><a href="#">References</a></li>
+        <li class="list_ns"><a href="#">Contact</a></li> <!-- About Me As Well Included in Contact-->
+        <li class="list_ns">
+          <div class="search-box" id="search_button">
+            <button class="btn-search">
+              <img src="Static/SearchLogo.png" id="SearchLogo"></img>
+              <i class="fas fa-search"></i>
+            </button>
+            <input type="text" id="input-search" placeholder="Search...">
+          </div><!-- Alternating "Search... "[Module Names EX:If Loop]" randomly from the Module json, Deletes its self and replaces it by the character-->
+      </li><!-- A Search form [API]; Uses Users Key Terms and Compares them to A Database of Related Webpages(Modules + Nav Pages) (All Webpages Will Have a Set of Key Terms Related to Their Existence)-->
+      </ul>
+     </nav>
+    </header>
+
+    <div class="dark_mode">
+      <button id="dark_mode_button" type="button"><div id="dark_mode_slider"></div></button>
+    </div>
+
+     <main> <!-- Here is our page's main content (Have a "Hello World" Gif that deletes itself and replaces it with more common first code thingies)-->
+      <b1 id="text">asdad</b1>
+    </main>
+
+    <footer> <!-- Random Quotes From Famous Programmers -->
+      <p></p>
+    </footer>
+
+  </body>
+  
+  <script src="DarkMode.js"></script>
+  <script src="Search.js"></script>
+
+  </html>
