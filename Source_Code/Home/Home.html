@@ -2,13 +2,13 @@
 <html lang="en-US">
    <head>
       <title>Coders Maxims</title>
-      <link rel="stylesheet" href="Home.html">
-      <link rel="stylesheet" href="/Source_Code/PageAttributes.css">
+      <link rel="stylesheet" href="Home.css">
+      <link rel="stylesheet" href="../PageAttributes.css">
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <script src="/Source_Code_v1.0.0.0/Home/JavaScript/Search.js"></script>
    </head>
+
    <body>
       <main>
          <!-- Here is our page's main content (Have a "Hello World" Gif that deletes itself and replaces it with more common first code thingies)-->
@@ -17,7 +17,7 @@
       <header class="header">
          <!-- Contains the CodersMaxims Logo-->
          <nav class="nav">
-            <!-- Contains Home (Dev Notes), Modules, Overview, Resources, Projects, References [API], About Me, Contact -->
+            <!-- Contains Home (Update Notes), Modules, Overview, Resources, Projects, References [API], About Me, Contact -->
             <ul class="nav-list">
                <li class="list-ns"><a href="Home.html"><img src="Static/CodersMaximsLogo.png" id="HeaderLogo"></img></a></li>
                <li class="list-ns"><a href="Home.html">Home</a></li>
@@ -33,7 +33,7 @@
                      <button class="btn-search">
                      <img src="Static/SearchLogo.png" id="SearchLogo"></img>
                      </button>
-                     <i class="fa fa-search" aria-hidden="true"></i>
+                     <i class="fa fa-search"></i>
                      <input type="text" name="" id="input-search" onkeyup='Search()' placeholder="Search...">
                   </div>
                   <!-- Alternating "Search... "[Module Names EX:If Loop]" randomly from the Module json, Deletes its self and replaces it by the character-->
@@ -42,9 +42,7 @@
             </ul>
          </nav>
       </header>
-      <!-- <div class="dark-mode">
-         <button id="dark-mode-button" type="button"><div id="dark-mode-slider"></div></button>
-         </div> -->
+
       <footer>
          <!-- Random Quotes From Famous Programmers -->
       </footer>
@@ -65,5 +63,7 @@
       </div>
    </body>
    <!--<script src="DarkMode.js"></script> Add A Color Changer, Everything But White-->
-   <script src="/Source_Code/Home/JavaScript/LowNavWidth.js"></script>
+   <script src="JavaScript/LowNavWidth.js"></script>
+   <script src="../Metadata/Modules.json"></script>
+   <script src="JavaScript/Search.js"></script>
 </html>
