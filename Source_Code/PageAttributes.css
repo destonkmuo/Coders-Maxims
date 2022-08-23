@@ -1,6 +1,6 @@
 html {
     margin: 0;
-    animation: fadeInAnimation ease 3s;
+    animation: fadeInAnimation ease .25s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }

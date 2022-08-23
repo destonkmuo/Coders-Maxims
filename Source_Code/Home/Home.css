@@ -146,7 +146,7 @@
 #low-nav-width-btn {
     display: none;
     position: fixed;
-    margin-top: 92vh;
+    margin-top: 90vh;
     justify-content: center;
     align-items: center;
     flex: 1;
@@ -189,12 +189,11 @@
     visibility:hidden;
     position:fixed;
     margin-top:55vh;
-    width:40vw;
+    width:36.25vw;
     height:50vh;
     opacity:0;
     transition: 300ms ease-in-out;
     border-radius:10px 10px 10px 10px;
-
 }
 
 .low-nav-width-drop-down:hover div{
@@ -226,7 +225,8 @@
     list-style: none;
     margin: 0 auto;
     list-style-type: none;
-    padding: 1vh 11.6vw;
+    padding: 1vh 9.5vw;
+
 }
 
 .low-width-nav-list li a:hover {
@@ -249,4 +249,14 @@
     align-items: center;
     flex: 1;
     margin-left: 32%;
+}
+
+#results-content {
+    width: 300px;
+    background-color: white;
+    margin-top: 3vh;
+    position: fixed;
+    border-radius: 10px 10px 10px 10px;
+    pointer-events: none;
+    visibility: hidden;
 }

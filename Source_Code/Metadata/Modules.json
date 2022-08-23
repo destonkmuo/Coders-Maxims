@@ -2,7 +2,7 @@
     {
         "name":"Basic Computer History",
         "url":"1",
-        "keyTerms":["history","computer","binary", "basic"],
+        "keyTerms":["history","computer","binary", "basic","loop"],
         "datePublishd":"8/21/2022",
         "dateOfLastEdit":"8/21/2022",
         "authors":"Deston Muo"
@@ -10,7 +10,7 @@
     {
         "name":"Hello World!",
         "url":"2",
-        "keyTerms":["loops","loop","start","beginner"],
+        "keyTerms":["loops","loop","start","beginner","hello","world"],
         "datePublishd":"8/21/2022",
         "dateOfLastEdit":"8/21/2022",
         "authors":"Deston Muo"
