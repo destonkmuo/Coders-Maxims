@@ -16,7 +16,7 @@
       </main>
       <header class="header">
          <!-- Contains the CodersMaxims Logo-->
-         <nav class="nav">
+         <nav>
             <!-- Contains Home (Update Notes), Modules, Overview, Resources, Projects, References [API], About Me, Contact -->
             <ul class="nav-list">
                <li class="list-ns"><a href="Home.html"><img src="Static/CodersMaximsLogo.png" id="HeaderLogo"></img></a></li>
@@ -33,7 +33,9 @@
                      <button class="btn-search"><img src="Static/SearchLogo.png" id="SearchLogo"></img></button>
                      <i class="fa fa-search"></i>
                      <input type="text" name="" id="input-search" onkeyup='Search()' placeholder="Search...">
-                     <ul id="results-content"><li class="results-lists"></li></ul>
+                     <ul id="results-content">
+                        <!-- Example : <a href="Home.html" class="results-lists">Basic Computer History</a> -->
+                     </ul> <!-- Search Results Content (10 at most)-->
                   </div>
                   <!-- Alternating "Search... "[Module Names EX:If Loop]" randomly from the Module json, Deletes its self and replaces it by the character-->
                </li>
