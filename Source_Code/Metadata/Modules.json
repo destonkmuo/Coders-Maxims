@@ -1,18 +1,16 @@
 [
     {
-        "name":"Basic Computer History",
-        "url":"facebook.com",
-        "index":0,
-        "keyTerms":["history","computer","binary", "basic","loop"],
+        "name":"Computer History",
+        "href":"Home.html",
+        "keyTerms":["computer","history","binary"],
         "datePublished":"8/21/2022",
         "dateOfLastEdit":"8/21/2022",
         "authors":"Deston Muo"
     },
     {
         "name":"Hello World!",
-        "url":"youtube.com",
-        "index":1,
-        "keyTerms":["loops","loop","start","beginner","hello","world"],
+        "href":"youtube.com",
+        "keyTerms":["hello","world","loops","loop","start","beginner"],
         "datePublished":"8/21/2022",
         "dateOfLastEdit":"8/21/2022",
         "authors":"Deston Muo"
