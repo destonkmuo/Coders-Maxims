@@ -10,7 +10,15 @@
     {
         "name":"Hello World!",
         "href":"youtube.com",
-        "keyTerms":["hello","world","loops","loop","start","beginner"],
+        "keyTerms":["hello","world","loops","loop","start","beginner","for loop"],
+        "datePublished":"8/21/2022",
+        "dateOfLastEdit":"8/21/2022",
+        "authors":"Deston Muo"
+    },
+    {
+        "name":"Data Structure and Algorithms",
+        "href":"algorithms.com",
+        "keyTerms":["data","structure","algorithm"],
         "datePublished":"8/21/2022",
         "dateOfLastEdit":"8/21/2022",
         "authors":"Deston Muo"
