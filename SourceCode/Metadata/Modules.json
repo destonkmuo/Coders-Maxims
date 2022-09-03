@@ -5,7 +5,8 @@
         "keyTerms":["computer","history","binary"],
         "datePublished":"8/21/2022",
         "dateOfLastEdit":"8/21/2022",
-        "authors":"Deston Muo"
+        "authors":"Deston Muo",
+        "description":""
     },
     {
         "name":"Hello World!",
@@ -13,7 +14,8 @@
         "keyTerms":["hello","world","loops","loop","start","beginner","for loop"],
         "datePublished":"8/21/2022",
         "dateOfLastEdit":"8/21/2022",
-        "authors":"Deston Muo"
+        "authors":"Deston Muo",
+        "description":""
     },
     {
         "name":"Data Structure and Algorithms",
@@ -21,6 +23,7 @@
         "keyTerms":["data","structure","algorithm"],
         "datePublished":"8/21/2022",
         "dateOfLastEdit":"8/21/2022",
-        "authors":"Deston Muo"
+        "authors":"Deston Muo",
+        "description":""
     }
 ]
