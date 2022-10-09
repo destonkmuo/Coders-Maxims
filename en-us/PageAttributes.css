@@ -1,18 +1,31 @@
 html {
-    margin: 0;
+    position: relative;
     animation: fadeInAnimation ease .25s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
+    min-height: 112%;
 }
 
 body {
-    margin: 0;
-    margin-top : 0px;
-    padding: 0;
     transition: 1s;
     background-color: darkslategray;
     overflow-x: hidden; /* Hide horizontal scrollbar */
+    display:flex;
 }    
+
+main {
+  display:flex;
+  margin-bottom: 50vh;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 100px;
+  background-color: rgb(47,55,55);
+}
 
 @keyframes fadeInAnimation {
     0% {

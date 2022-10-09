@@ -1,12 +1,12 @@
 const searchResultsContent = document.getElementById('results-content');
 const searchButton = document.getElementById('search-button');
-var results = [];
+var results = new Set();
 
 var devLog = false;
 
 function resetResults() {
     while (searchResultsContent.firstChild) {searchResultsContent.removeChild(searchResultsContent.lastChild) }
-    results = [];
+    results = new Set();
 }
 
 function Search() {
@@ -15,19 +15,19 @@ function Search() {
         .then(response => response.json())
         .then(modules => {
             for (let modulesIndex = 0; modulesIndex < modules.length; modulesIndex++) {
-                if (results.includes(modules[modulesIndex].href)) {
-                    if(devLog) { console.error(`Results Already Contains User Input... Resetting: ${results}`) }
+                if (results.has(modules[modulesIndex].href || input == " ")) {
+                    if(devLog) { console.error(`Results Already Contains User Input... Resetting: ${results}, Or Space Is The Only Input`) }
                     resetResults();
                     return;
                 } else if(modules[modulesIndex].keyTerms.filter(keyTerms => keyTerms.startsWith(input)).length > 0 && input.length > 0){
                     if(devLog) { console.log(`Found ${modules[modulesIndex].name}... Appending Potential href`) }
-                    results.push(modules[modulesIndex].href);
+                    results.add(modules[modulesIndex].href);
                 } else if((modules[modulesIndex].name.replace(' ','').toLowerCase().startsWith(input.replace(' ',''))) && input.length > 0){
                     if(devLog) { console.log(`Found ${modules[modulesIndex].name}... Appending Potential href`) }
-                    results.push(modules[modulesIndex].href);
+                    results.add(modules[modulesIndex].href);
                 }
                 
-                if (results.includes(modules[modulesIndex].href)) {
+                if (results.has(modules[modulesIndex].href)) {
                     var searchResult = document.createElement("a");
                     searchResult.innerHTML = modules[modulesIndex].name;
                     searchResult.href = modules[modulesIndex].href;
@@ -47,39 +47,38 @@ function Search() {
                 }
             }
 
-            if (results.length > 0) { visibility(true) } else { visibility(false) }
-            searchButton.onmousedown = function() { if (results.length > 0) { visibility(true) }}
+            if (results.size > 0) { visibility(true) } else { visibility(false) }
+            searchButton.onmousedown = function() { if (results.size > 0) { visibility(true) }}
             searchButton.onmouseleave = function() { visibility(false) }
         })
-    if(devLog) { console.log(`Search Request Complete: ${results}`); }
+    if(devLog) { console.log(`Search Request Complete: ${results.values()}`); }
     resetResults();
 }
 
-
-/*document.addEventListener("DOMContentLoaded", function(event) { 
+/*
+document.addEventListener("DOMContentLoaded", function(event) { 
 var time = 0;
 var currentString = [];
-var timeSpeed = 400;
-var arrOfwords = [["H","e","l","l","o"," ","W","o","r","l","d"],[""]]
-var increment = true;
+var timeSpeed = 350;
+var x = 0;
+var arrOfWords = [["H","e","l","l","o"," ","W","o","r","l","d"],["F","o","r"," ","L","o","o","p"]];
 
 var interval = setInterval(function(){
-    if(time == arrOfwords[0].length && increment == true){
-        increment = false;
-        console.log(increment);
-        time = 1;
-        timeSpeed = 200;
-        currentString.pop();
-        document.getElementById("input-search").placeholder = `Search... ${currentString.join("")}`;
-        if(currentString.length == 0) {
-            console.log(currentString.length);
-            increment = true;
-        }
-    }
-    currentString.push(arrOfwords[0][time]);
     document.getElementById("input-search").placeholder = `Search... ${currentString.join("")}`;
-    time += 1;
+
+    if(x != arrOfWords.length && time == arrOfWords[x].length) {
+        currentString.pop();
+    }
+    if(time != arrOfWords[x].length) {
+        currentString.push(arrOfWords[x][time]);
+        time += 1;
+    } else if(x + 1 == arrOfWords.length) {
+        x = 0;
+    } else if(currentString.length == 0) {
+        time = 0;
+        x += 1;
+    } 
+
 }, timeSpeed);
 })
 */
-        

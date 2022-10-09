@@ -1,43 +1,38 @@
 <!DOCTYPE html>
 <html lang="en-US">
-   <head>
-      <title>Coders Maxims</title>
-      <link rel="stylesheet" href="Home.css">
-      <link rel="stylesheet" href="../PageAttributes.css">
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   </head>
-   <body>
-      <main>
-         <div class="heading"><p>Programming Fundamentals For All</p></div>
-         <div class="recent-modules">
-            <ul class="rm-list"> 
+  <head>
+    <title>Coders Maxims</title>
+    <link rel="stylesheet" href="Home.css">
+    <link rel="stylesheet" href="../PageAttributes.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  </head>
+  <body>
+    <main>
+      <div id="intro-view">
+        <h1>Programming Fundamentals For All</h1>
+        <p>Breeding New Principles And People</p>
+      </div>
+      <div id="content-feed">
+        <div class="recent-modules">
+          <ul id="rm-list">
             <!-- Consist Of The Top 7 Most Recently Updated Or Created Modules, Entire Thing Will Be A Seperate Document Within A Iframe Tag-->
-               <li class="rm-list-item"><a href="Home.html"> Uploaded [Modules Name] On [Number] 9/2/2022: oh my goodness thank you so much for this one, i've been literally gone crazy bc of some problems that I could solve by your answer!!</a></li>
-               <li class="rm-list-item"><a href="Home.html">Home</a></li>
-               <li class="rm-list-item"><a href="Home.html">Home</a></li>
-               <li class="rm-list-item"><a href="Home.html">Home</a></li>
-               <li class="rm-list-item"><a href="Home.html">Home</a></li>
-               <li class="rm-list-item"><a href="Home.html">Home</a></li>
-               <li class="rm-list-item"><a href="Home.html">Home</a></li>
-               <li class="rm-list-item"><a href="Home.html">Home</a></li>
-               <li class="rm-list-item"><a href="Home.html">Home</a></li>
-               <li class="rm-list-item"><a href="Home.html">Home</a></li>
-               <li class="rm-list-item"><a href="Home.html">Home</a></li>
-               <li class="rm-list-item"><a href="Home.html">Home</a></li>
-
-            </ul>
-         </div>
-         <div class="social-media-feed"></div> <!-- Youtube & Twitter API-->
-      </main>
+          </ul>
+        </div>
+        <div class="social-media-feed"></div>
+        <!-- Youtube & Twitter API-->
+      </div>
+    </main>
       <header class="header">
          <!-- Contains the CodersMaxims Logo-->
          <nav>
+            <!-- When the user scrolls past a specified Height, instantiate this box -->
+            <div id="nav-visibility-bar"></div>
             <!-- Contains Home (Update Notes), Modules, Overview, Resources, Projects, References [API], About Me, Contact -->
             <ul class="nav-list">
-               <li class="nav-list-item"><a href="Home.html"><img src="Static/CodersMaximsLogo.png" id="HeaderLogo"></img></a></li>
-               <li class="nav-list-item"><a href="Home.html">Home</a></li>
+               <li class="nav-list-item"><a href="../Home/"><img src="Static/CodersMaximsLogo.png" id="HeaderLogo"></img></a></li>
+               <li class="nav-list-item"><a href="../Home/">Home</a></li>
                <li class="nav-list-item"><a href="#">Modules</a></li>
                <li class="nav-list-item"><a href="#">Overview</a></li>
                <li class="nav-list-item"><a href="#">Resources</a></li>
@@ -62,9 +57,7 @@
             </ul>
          </nav>
       </header>
-      <footer>
-         <!-- Random Quotes From Famous Programmers -->
-      </footer>
+      
       <div class="low-nav-width-drop-down">
          <div id="drop-down-content">
             <!-- Inside the actual drop down -->
@@ -80,8 +73,16 @@
          </div>
          <span><button id="low-nav-width-btn">☰</button></span> <!-- Outside of the dropdown-->
       </div>
+      <footer>
+         <!-- Random Quotes From Famous Programmers -->
+            <p>programming fundamentals for all</p>
+            <!-- link different social media pages -->
+      </footer>
    </body>
+
    <!--<script src="DarkMode.js"></script> Add A Color Changer, Everything But White-->
    <script src="JavaScript/LowNavWidth.js"></script>
    <script src="JavaScript/Search.js"></script>
+   <script src="JavaScript/recentModules.js"></script>
+   <script src="JavaScript/Misc.js"></script>
 </html>
