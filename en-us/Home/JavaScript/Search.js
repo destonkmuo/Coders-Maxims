@@ -1,15 +1,15 @@
-const searchResultsContent = document.getElementById('results-content');
-const searchButton = document.getElementById('search-button');
-var results = new Set();
-
-var devLog = false;
-
-function resetResults() {
-    while (searchResultsContent.firstChild) {searchResultsContent.removeChild(searchResultsContent.lastChild) }
-    results = new Set();
-}
-
 function Search() {
+    var searchResultsContent = document.getElementById('results-content');
+    var searchButton = document.getElementById('search-button');
+    var results = new Set();
+
+    var devLog = false;
+
+    function resetResults() {
+        while (searchResultsContent.firstChild) {searchResultsContent.removeChild(searchResultsContent.lastChild) }
+        results = new Set();
+    }
+
     var input = document.getElementById("input-search").value.toLowerCase();
     fetch("../Metadata/Modules.json")
         .then(response => response.json())

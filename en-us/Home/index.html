@@ -25,37 +25,7 @@
       </div>
     </main>
       <header class="header">
-         <!-- Contains the CodersMaxims Logo-->
-         <nav>
-            <!-- When the user scrolls past a specified Height, instantiate this box -->
-            <div id="nav-visibility-bar"></div>
-            <!-- Contains Home (Update Notes), Modules, Overview, Resources, Projects, References [API], About Me, Contact -->
-            <ul class="nav-list">
-               <li class="nav-list-item"><a href="../Home/"><img src="Static/CodersMaximsLogo.png" id="HeaderLogo"></img></a></li>
-               <li class="nav-list-item"><a href="../Home/">Home</a></li>
-               <li class="nav-list-item"><a href="#">Modules</a></li>
-               <li class="nav-list-item"><a href="#">Overview</a></li>
-               <li class="nav-list-item"><a href="#">Resources</a></li>
-               <li class="nav-list-item"><a href="#">Projects</a></li>
-               <li class="nav-list-item"><a href="#">References</a></li>
-               <li class="nav-list-item"><a href="#">Contact</a></li>
-               <!-- About Me As Well Included in Contact-->
-               <li class="nav-list-item">
-                  <div class="search-box" id="search-button">
-                     <button class="btn-search"><img src="Static/SearchLogo.png" id="SearchLogo"></img></button>
-                     <i class="fa fa-search"></i>
-                     <input type="text" name="" id="input-search" onkeyup='Search()' placeholder="Search...">
-                     <ul id="results-content">
-                        <!-- Example :<a href="Home.html" class="results-lists">Basic Computer History</a> -->
-                     </ul>
-                     <!-- Search Results Content (10 at most)-->
-                  </div>
-                  <!-- Alternating "Search... "[Module Names EX:If Loop]" randomly from the Module json, Deletes its self and replaces it by the character-->
-               </li>
-               </div>
-               <!-- A Search form [API]; Uses Users Key Terms and Compares them to A Database of Related Webpages(Modules + Nav Pages) (All Webpages Will Have a Set of Key Terms Related to Their Existence)-->
-            </ul>
-         </nav>
+         <nav id="nav"><div id="nav-visibility-bar"></div></nav>
       </header>
       
       <div class="low-nav-width-drop-down">
@@ -85,4 +55,5 @@
    <script src="JavaScript/Search.js"></script>
    <script src="JavaScript/recentModules.js"></script>
    <script src="JavaScript/Misc.js"></script>
+   <script src="../domStart.js"></script>
 </html>

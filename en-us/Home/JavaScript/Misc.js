@@ -7,7 +7,6 @@ window.addEventListener("scroll", (event) => {
     } else {
         navVisibilityBar.style.opacity = 0;
     }
-    console.log(userScrollHeight);
 });
 
 // Nav Visibility 
