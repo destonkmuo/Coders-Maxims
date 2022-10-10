@@ -3,14 +3,15 @@ var button;
 var dropDown;
 var width, height;
 
+
 setTimeout(function() {
     navList = document.getElementsByClassName('nav-list-item');
     button = document.getElementById('low-nav-width-btn');
     dropDown = document.getElementsByClassName('low-nav-width-drop-down');
-}, 1500);
 
+}, 100);
 
-window.onresize = window.onload = function() {
+window.onresize = window.onload = document.onmouseover = function() {
     try {
         width = window.innerWidth;
         height = window.innerHeight;
