@@ -1,11 +1,16 @@
-window.addEventListener('load', function() {
-    var nav = document.getElementById('nav');
-
+    window.addEventListener('load', function() {
+    var nav = document.getElementsByTagName('nav');
+    
+    var navVisibilityBar = document.createElement('div');
+    navVisibilityBar.id = "nav-visibility-bar";
+    navVisibilityBar.style.opacity = 0;
+    document.body.appendChild(navVisibilityBar);
+    nav[0].appendChild(navVisibilityBar);
 
     var navList = document.createElement('ul');
     navList.className = "nav-list";
     document.body.appendChild(navList);
-    nav.appendChild(navList);
+    nav[0].appendChild(navList);
 
     /////////////////////////////////////
 

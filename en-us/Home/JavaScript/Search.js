@@ -47,7 +47,7 @@ function Search() {
                 }
             }
 
-            if (results.size > 0) { visibility(true) } else { visibility(false) }
+            results.size > 0 ? visibility(true) : visibility(false);
             searchButton.onmousedown = function() { if (results.size > 0) { visibility(true) }}
             searchButton.onmouseleave = function() { visibility(false) }
         })
