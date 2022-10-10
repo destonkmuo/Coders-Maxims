@@ -191,11 +191,14 @@
 
 .low-nav-width-drop-down div a{
     display:block;
+    width: 100%;
     text-decoration:none;
-    padding:8px;
+    padding: 15px 0px;
     transition:.1s;
     white-space:nowrap;
     color: black;
+    justify-content: center;
+    align-items: center;
     
 }
 
@@ -204,14 +207,13 @@
 }
 
 .low-width-nav-list {
+    width: 100%;
     position: fixed;
-    flex: 1;
     height: 60px;
-    font-size: 11px;
+    font-size: 17.5px;
     list-style: none;
-    margin: 0 auto;
     list-style-type: none;
-    padding: 3vh 11vw;
+
 
 }
 
