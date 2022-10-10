@@ -15,7 +15,7 @@ function Search() {
         .then(response => response.json())
         .then(modules => {
             for (let modulesIndex = 0; modulesIndex < modules.length; modulesIndex++) {
-                if (results.has(modules[modulesIndex].href || input == " ")) {
+                if (input == " " || results.has(modules[modulesIndex].href)) {
                     if(devLog) { console.error(`Results Already Contains User Input... Resetting: ${results}, Or Space Is The Only Input`) }
                     resetResults();
                     return;
@@ -51,6 +51,7 @@ function Search() {
             searchButton.onmousedown = function() { if (results.size > 0) { visibility(true) }}
             searchButton.onmouseleave = function() { visibility(false) }
         })
+
     if(devLog) { console.log(`Search Request Complete: ${results.values()}`); }
     resetResults();
 }
