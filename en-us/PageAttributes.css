@@ -8,7 +8,7 @@ html {
 
 body {
     transition: 1s;
-    background-color: darkslategray;
+    background-color: black;
     overflow-x: hidden; /* Hide horizontal scrollbar */
     display:flex;
 }    
@@ -18,13 +18,24 @@ main {
   margin-bottom: 50vh;
 }
 
+#philosophic-helper {
+  justify-content: center;
+  align-items: center;
+  position:fixed;
+  bottom: 0px;
+  width: 18.5%;
+  z-index: 1;
+  opacity: 0%;
+  transition: opacity 1000ms ease-in-out;
+}
+
 footer {
   position: absolute;
   bottom: 0;
   width: 100%;
   /* Set the fixed height of the footer here */
-  height: 100px;
-  background-color: rgb(47,55,55);
+  height: 150px;
+  background-color: rgba(0,5,30,200);
 }
 
 @keyframes fadeInAnimation {
@@ -43,17 +54,17 @@ footer {
   
   /* Track */
 ::-webkit-scrollbar-track {
-    background: rgba(47,89,89,255);
+    background: black;
 }
   
   /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: rgba(47,55,55,255);
+    background: rgba(0,5,40,200);
 }
   
   /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: rgba(47,60,60,255);
+    background: rgba(0,0,0,0.4);
 }
 
 *{
@@ -137,7 +148,7 @@ footer {
 
 #HeaderLogo {
   margin-right: 2.15rem;
-  width: 28vw; 
+  width: 27vw; 
 }
 
 #HeaderLogo:hover {
@@ -151,11 +162,11 @@ footer {
   justify-content: center;
   align-items: center;
   flex: 1;
-  width: 96%;
-  height: 60px;
+  width: 100%;
+  height: 3.8%;
   font-size: .85vw;
   list-style: none;
-  margin-top: 8px;
+  margin-top: 2.25vh;
 }
 
 .nav-list li a:hover {
@@ -177,12 +188,12 @@ footer {
   align-items: center;
   width: 98%;
   height: 8%;
-  margin-top: 6px;
-  background-color: rgba(47,60,60,255);
+  margin-top: .25%;
+  background-color: rgba(0,5,30,200);
   opacity: 0;
-  border-radius:30px 30px 30px 30px;
+  border-radius:50px;
   border-right: 100px;
-  transition: opacity 500ms ease-in-out;
+  transition: opacity 600ms ease-in-out;
   margin-left: 1%;
 }
 
@@ -297,7 +308,7 @@ footer {
 
 #results-content {
   width: 300px;
-  background-color: rgb(47,55,55);
+  background-color: rgba(0,5,30,200);
   position: fixed;
   border-radius: 10px 10px 10px 10px;
   pointer-events: none;
