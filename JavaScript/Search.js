@@ -1,5 +1,5 @@
 function Search() {
-    var searchResultsContent = document.getElementById('results-content');
+    var searchResultsContent = document.getElementById('search-results-content');
     var searchButton = document.getElementById('search-button');
     var results = new Set();
 
@@ -11,12 +11,12 @@ function Search() {
     }
 
     var input = document.getElementById("input-search").value.toLowerCase();
-    fetch("../Metadata/Modules.json")
+    fetch("en-us/Metadata/Modules.json")
         .then(response => response.json())
         .then(modules => {
             for (let modulesIndex = 0; modulesIndex < modules.length; modulesIndex++) {
                 if (input == " " || results.has(modules[modulesIndex].href)) {
-                    if(devLog) { console.error(`Results Already Contains User Input... Resetting: ${results}, Or Space Is The Only Input`) }
+                    if(devLog) { console.error(`Results Contains Space or Already Contains User Input... Resetting: ${results}, Or Space Is The Only Input`) }
                     resetResults();
                     return;
                 } else if(modules[modulesIndex].keyTerms.filter(keyTerms => keyTerms.startsWith(input)).length > 0 && input.length > 0){
@@ -40,9 +40,11 @@ function Search() {
             function visibility(boolean) {
                 if (boolean) {
                     searchResultsContent.style.visibility = "visible";
+                    searchResultsContent.style.opacity = "100%";
                     searchResultsContent.style.pointerEvents = "all";
                 } else {
                     searchResultsContent.style.visibility = "hidden";
+                    searchResultsContent.style.opacity = "0%";
                     searchResultsContent.style.pointerEvents = "none";
                 }
             }

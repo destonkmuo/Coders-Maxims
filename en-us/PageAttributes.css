@@ -8,9 +8,12 @@ html {
 
 body {
     transition: 1s;
-    background-color: black;
+    background-image: url(/Static/starryBackground.jpg);
+    background-repeat: repeat; /* Do not repeat the image */
     overflow-x: hidden; /* Hide horizontal scrollbar */
     display:flex;
+    background-color: black;
+    background-size: contain;
 }    
 
 main {
@@ -59,7 +62,8 @@ footer {
   
   /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: rgba(0,5,40,200);
+    background: #7ce6f0;
+    border-radius: 10px;
 }
   
   /* Handle on hover */
@@ -200,27 +204,27 @@ footer {
 #low-nav-width-btn {
   display: none;
   position: fixed;
-  margin-top: 90vh;
   justify-content: center;
   align-items: center;
   flex: 1;
-  width: 100%;
+  left: 3.5%;
+  top: 0.6%;
   padding: 0;
   border: none;
   background: none;
   color: white;
-  font-size: 6vh;
+  font-size: 5vh;
   z-index:2;
+  opacity: 100%;
 }
 
 #low-nav-width-btn:hover {
-  opacity: 75%;
+  opacity: 50%;
 }
 
 .low-nav-width-drop-down{
   display:inline-block;
   position:relative;
-  margin-top: 2%;
 }
 
 .low-nav-width-drop-down button:focus{
@@ -238,17 +242,19 @@ footer {
 .low-nav-width-drop-down div{
   justify-content: center;
   align-items: center;
-  background-color:#fff;
+  background-color:rgba(0,5,30,200);
   box-shadow:0 4px 8px rgba(0,0,0,0.2);
   z-index:3;
   visibility:hidden;
   position:fixed;
-  margin-top:55vh;
+  bottom: -6%;
   width:36.25vw;
   height:50vh;
   opacity:0;
   transition: 300ms ease-in-out;
-  border-radius:10px 10px 10px 10px;
+  border-radius:10px;
+  pointer-events: none;
+  left: 0%;
 }
 
 .low-nav-width-drop-down:hover div{
@@ -293,7 +299,7 @@ footer {
   transition: all 400ms ease;
   text-decoration: none;
   font-weight: bold;
-  color: black;
+  color: white;
   list-style: none;
   justify-content: center;
   text-align:center;
@@ -306,13 +312,17 @@ footer {
   margin-left: 32%;
 }
 
-#results-content {
+#search-results-content {
   width: 300px;
-  background-color: rgba(0,5,30,200);
+  background-color: black;
   position: fixed;
   border-radius: 10px 10px 10px 10px;
   pointer-events: none;
   visibility: hidden;
+  opacity: 0;
+  transition: opacity 250ms ease-in-out;
+  outline-style:outset;
+  outline-color: white;
 }
 
 .results-lists {
