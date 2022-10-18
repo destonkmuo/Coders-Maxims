@@ -4,13 +4,13 @@ html {
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
     min-height: 112%;
+    scroll-behavior: smooth;
 }
 
 body {
     transition: 1s;
     background-image: url(/Static/starryBackground.jpg);
     background-repeat: repeat; /* Do not repeat the image */
-    overflow-x: hidden; /* Hide horizontal scrollbar */
     display:flex;
     background-color: black;
     background-size: contain;
@@ -38,7 +38,7 @@ footer {
   width: 100%;
   /* Set the fixed height of the footer here */
   height: 150px;
-  background-color: rgba(0,5,30,200);
+  background-color: rgba(0,5,20,200);
 }
 
 @keyframes fadeInAnimation {
@@ -68,7 +68,7 @@ footer {
   
   /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: rgba(0,0,0,0.4);
+    background: rgba(0,0,0,1);
 }
 
 *{
@@ -193,7 +193,7 @@ footer {
   width: 98%;
   height: 8%;
   margin-top: .25%;
-  background-color: rgba(0,5,30,200);
+  background-color: rgba(0,5,20,200);
   opacity: 0;
   border-radius:50px;
   border-right: 100px;
@@ -242,7 +242,7 @@ footer {
 .low-nav-width-drop-down div{
   justify-content: center;
   align-items: center;
-  background-color:rgba(0,5,30,200);
+  background-color:rgba(0,5,20,200);
   box-shadow:0 4px 8px rgba(0,0,0,0.2);
   z-index:3;
   visibility:hidden;
@@ -314,9 +314,9 @@ footer {
 
 #search-results-content {
   width: 300px;
-  background-color: black;
+  background-color: rgba(0,5,20,200);
   position: fixed;
-  border-radius: 10px 10px 10px 10px;
+  border-radius: 10px;
   pointer-events: none;
   visibility: hidden;
   opacity: 0;
