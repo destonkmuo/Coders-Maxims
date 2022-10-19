@@ -1,7 +1,7 @@
 [
     {
         "name":"Computer History",
-        "href":"Home.html",
+        "href":"/en-us/Search/?search=Computer History",
         "moduleIdentifier":"A002",
         "keyTerms":["computer","history","binary"],
         "datePublished":"8/21/2022",
@@ -11,7 +11,7 @@
     },
     {
         "name":"Hello World!",
-        "href":"youtube.com",
+        "href":"/en-us/Search/?search=Hello World!",
         "moduleIdentifier":"A001",
         "keyTerms":["hello","world","loops","loop","start","beginner","for loop"],
         "datePublished":"8/21/2022",
@@ -21,7 +21,7 @@
     },
     {
         "name":"Data Structures and Algorithms",
-        "href":"algorithms.com",
+        "href":"/en-us/Search/?search=Data Structures and Algorithms",
         "moduleIdentifier":"A000",
         "keyTerms":["data","structure","algorithm"],
         "datePublished":"8/21/2022",

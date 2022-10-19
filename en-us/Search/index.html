@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en-US">
+   <head>
+      <title>Coders Maxims</title>
+      <link rel="stylesheet" href="/PageAttributes.css">
+      <link rel="stylesheet" href="Search.css">
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <link rel="icon" href="/Static/descartes.png">
+   </head>
+   <body>
+    <main></main>
+    <header class="header">
+        <nav>
+            <div id="ph">            
+                <button onclick="phContent()"><img src="/Static/homeGraphic.png" id="philosophic-helper"/></button>
+                <div id="ph-content">
+                   <button id="x-button"onclick="closePHContent()"><img id="x-button" src="/Static/xbutton.png"></button>
+                </div>
+             </div>
+            <label class="switch">
+                <input type="checkbox" checked id="phCheckBox" onclick="phLS()">
+                <span class="slider round"></span>
+            </label>
+           <!-- When the user scrolls past a specified Height, instantiate this box -->
+           <div id="nav-visibility-bar"></div>
+           <!-- Contains Home (Update Notes), Modules, Overview, Resources, Projects, References [API], About Me, Contact -->
+           <ul class="nav-list">
+              <li class="nav-list-item"><a href="/"><img src="/Static/CodersMaximsLogo.png" id="HeaderLogo"></img></a></li>
+              <li class="nav-list-item"><a href="/">Home</a></li>
+              <li class="nav-list-item"><a href="#">Modules</a></li>
+              <li class="nav-list-item"><a href="#">Overview</a></li>
+              <li class="nav-list-item"><a href="#">Resources</a></li>
+              <li class="nav-list-item"><a href="#">Projects</a></li>
+              <li class="nav-list-item"><a href="#">References</a></li>
+              <li class="nav-list-item"><a href="#">Contact</a></li>
+              <!-- About Me As Well Included in Contact-->
+              <li class="nav-list-item">
+                 <div class="search-box" id="search-button">
+                    <button class="btn-search"><img src="/Static/SearchLogo.png" id="SearchLogo"></img></button>
+                    <i class="fa fa-search"></i>
+                    <input type="text" name="" id="input-search" onkeyup='Search()' placeholder="Search...">
+                    <ul id="search-results-content">
+                       <!-- Example :<a href="Home.html" class="results-lists">Basic Computer History</a> -->
+                    </ul>
+                    <!-- Search Results Content (10 at most)-->
+                 </div>
+                 <!-- Alternating "Search... "[Module Names EX:If Loop]" randomly from the Module json, Deletes its self and replaces it by the character-->
+              </li>
+              <li>
+                 <div class="low-nav-width-drop-down">
+                    <div id="drop-down-content">
+                       <!-- Inside the actual drop down -->
+                       <ul class="low-width-nav-list">
+                          <li><a href="../">Home</a></li>
+                          <li><a href="#">Modules</a></li>
+                          <li><a href="#">Overview</a></li>
+                          <li><a href="#">Resources</a></li>
+                          <li><a href="#">Projects</a></li>
+                          <li><a href="#">References</a></li>
+                          <li><a href="#">Contact</a></li>
+                       </ul>
+                    </div>
+                    <span><button id="low-nav-width-btn">☰</button></span> <!-- Outside of the dropdown-->
+                 </div>
+              </li>
+              <!-- A Search form [API]; Uses Users Key Terms and Compares them to A Database of Related Webpages(Modules + Nav Pages) (All Webpages Will Have a Set of Key Terms Related to Their Existence)-->
+           </ul>
+           <!-- Add a helper bot that answers FAQ and sends emails -->
+           <!-- Could be annoying so make it very transparent untill hovered over -->
+           <!-- A one time greet that takes the user through the main page -->
+        </nav>
+     </header>
+     <footer>
+        <!-- Random Quotes From Famous Programmers -->
+        <p>programming fundamentals for all</p>
+        <!-- link different social media pages -->
+     </footer>
+   </body>
+   
+   <script src="/JavaScript/LowNavWidth.js"></script>
+   <script src="/JavaScript/Search.js"></script>
+   <script src="/JavaScript/Misc.js"></script> 
+   <script src="/JavaScript/pageJump.js"></script>
+   <script src="/JavaScript/philosophicHelper.js"></script>
+
+   <script src="Javascript/globalSearch.js"></script>
+</html>

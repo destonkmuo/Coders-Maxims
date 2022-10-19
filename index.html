@@ -3,11 +3,12 @@
    <head>
       <title>Coders Maxims</title>
       <link rel="stylesheet" href="Home.css">
-      <link rel="stylesheet" href="en-us/PageAttributes.css">
+      <link rel="stylesheet" href="/PageAttributes.css">
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <link rel="icon" href="Static/descartes.png">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
    </head>
    <body>
       <main>
@@ -24,12 +25,13 @@
          </div>
 
          <button id="tutorial-button" onclick="jumpTo('page-jumps')">💫 ↓  Let's Go!  ↓ 💫</button>
+         
          <div id="page-jumps">
             <button class="learn-page-jump" onclick="jumpTo('content-feed')">
                <img src="Static/learnIcon.png">
                <h2 id="pp">Learn</h2>
                <h3>Self Paced Learning</h3>  
-               <p>Students may learn through the guided modules or search for specific concepts to improve their knowledge in CS.</p>
+               <p>Students may learn through the self guided modules or search for specific concepts to improve their knowledge of CS.</p>
             </button> 
             <button class="how-page-jump" onclick="jumpTo('page-jumps')">
                <img src="Static/howIcon.png">
@@ -40,7 +42,7 @@
                <img src="Static/practiceIcon.png">
                <h2>Practice</h2>
                <h3>Assignments & Tests</h3>  
-               <P>Students will take EOM's, end of module exams, that test their knowledge on the topic based on core fundamentals that are easily miscontrued.</p>
+               <P>Students will take EOM's, or end of module exams, that test their knowledge of the topic based on core fundamentals that are easily misconstrued.</p>
             </button>
             <button class="why-page-jump" onclick="jumpTo('page-jumps')">
                <img src="Static/whyIcon.png">
@@ -49,6 +51,7 @@
                <p>Learn why I decided to create this website and more about my endeavors and current résumé.</p>
             </button>
          </div>
+         <h1 id="page-jump-intro-text">Click A Tab To Navigate</h1>
          <div id="content-feed">
             <div class="recent-modules">
                <ul id="rm-list">
@@ -59,9 +62,18 @@
             <!-- Youtube & Twitter API-->
          </div>
       </main>
-      <header class="header">
+      <header>
          <nav>
-            <img src="Static/homeGraphic.png" id="philosophic-helper"/>
+            <div id="ph">            
+               <button onclick="phContent()"><img src="Static/homeGraphic.png" id="philosophic-helper"/></button>
+               <div id="ph-content">
+                  <button id="x-button"onclick="closePHContent()"><img id="x-button" src="Static/xbutton.png"></button>
+               </div>
+            </div>
+            <label class="switch">
+               <input type="checkbox" checked id="phCheckBox" onclick="phLS()">
+               <span class="slider round"></span>
+             </label>
             <!-- When the user scrolls past a specified Height, instantiate this box -->
             <div id="nav-visibility-bar"></div>
             <!-- Contains Home (Update Notes), Modules, Overview, Resources, Projects, References [API], About Me, Contact -->
@@ -118,93 +130,11 @@
       </footer>
    </body>
    <!--<script src="DarkMode.js"></script> Add A Color Changer, Everything But White-->
-   <script src="JavaScript/LowNavWidth.js"></script>
-   <script src="JavaScript/recentModules.js"></script>
-   <script src="JavaScript/Search.js"></script>
-   <script src="JavaScript/Misc.js"></script> 
-   <script src="JavaScript/pageJump.js"></script>
-   <script type="text/javascript">
-      function HomeSearch() {
-        var searchResultsContent = document.getElementById('home-search-results-content');
-        var searchBox = document.getElementById('home-search-box');
-        var results = new Set();
-      
-        var devLog = false;
-      
-        function resetResults() {
-            while (searchResultsContent.firstChild) {searchResultsContent.removeChild(searchResultsContent.lastChild) }
-            results = new Set();
-        }
-      
-        var input = document.getElementById("home-input-search").value.toLowerCase();
-        fetch("en-us/Metadata/Modules.json")
-            .then(response => response.json())
-            .then(modules => {
-                for (let modulesIndex = 0; modulesIndex < modules.length; modulesIndex++) {
-                    if (input == " " || results.has(modules[modulesIndex].href)) {
-                        if(devLog) { console.error(`Results Already Contains User Input... Resetting: ${results}, Or Space Is The Only Input`) }
-                        resetResults();
-                        return;
-                    } else if(modules[modulesIndex].keyTerms.filter(keyTerms => keyTerms.startsWith(input)).length > 0 && input.length > 0){
-                        if(devLog) { console.log(`Found ${modules[modulesIndex].name}... Appending Potential href`) }
-                        results.add(modules[modulesIndex].href);
-                    } else if((modules[modulesIndex].name.replace(' ','').toLowerCase().startsWith(input.replace(' ',''))) && input.length > 0){
-                        if(devLog) { console.log(`Found ${modules[modulesIndex].name}... Appending Potential href`) }
-                        results.add(modules[modulesIndex].href);
-                    }
-                    
-                    if (results.has(modules[modulesIndex].href)) {
-                        var searchResult = document.createElement("a");
-                        searchResult.innerHTML = modules[modulesIndex].name;
-                        searchResult.href = modules[modulesIndex].href;
-                        searchResult.className = "home-results-lists";
-                        document.body.appendChild(searchResult);
-                        searchResultsContent.appendChild(searchResult);
-                    }
-                }
-      
-                function visibility(boolean) {
-                    if (boolean) {
-                        searchResultsContent.style.visibility = "visible";
-                        searchResultsContent.style.opacity = "75%";
-                        searchResultsContent.style.pointerEvents = "all";
-                    } else {
-                        searchResultsContent.style.visibility = "hidden";
-                        searchResultsContent.style.opacity = "0%";
-                        searchResultsContent.style.pointerEvents = "none";
-                    }
-                }
-      
-                results.size > 0 ? visibility(true) : visibility(false);
-                searchBox.onmousedown = function() { if (results.size > 0) { visibility(true) }}
-                searchBox.onmouseleave = function() { visibility(false) }
-            })
-      
-        if(devLog) { console.log(`Search Request Complete: ${results.values()}`); }
-        resetResults();
-      }
-      
-      window.addEventListener('load', function() {
-      var currentString = [];
-      var currentSecArrPos = 0;
-      var arrOfWordsPostion = 0;
-      var timeSpeed = 150;
-      var arrOfWords = [["H","e","l","l","o"," ","W","o","r","l","d"," "," "," "],["F","o","r"," ","L","o","o","p","s"," "," "," "],["A","l","g","o","r","i","t","m","s"," "," "," "],["D", "a", "t", "a"," ", "S", "t", "r", "u", "c", "t", "u", "r", "e","s"," "," "," "],["C", "o", "m", "p", "u", "t", "e", "r"," ", "H", "i", "s", "t", "o", "r", "y"," "," "," "]];
-      var interval = setInterval(function(){
-      document.getElementById("home-input-search").placeholder = `Search... ${currentString.join("")}`;
-      
-      if(arrOfWordsPostion == arrOfWords.length) {
-        arrOfWordsPostion = 0;
-      } else if(currentSecArrPos < arrOfWords[arrOfWordsPostion].length) {
-      currentString.push(arrOfWords[arrOfWordsPostion][currentSecArrPos]);
-      currentSecArrPos += 1;
-      } else if(currentString.length > 0){
-        currentString.pop();
-      } else if(currentString.length == 0) {
-        currentSecArrPos = 0;
-        arrOfWordsPostion += 1;
-      }
-      }, timeSpeed);
-      })
-   </script>
+   <script src="/JavaScript/LowNavWidth.js"></script>
+   <script src="/JavaScript/recentModules.js"></script>
+   <script src="/JavaScript/Search.js"></script>
+   <script src="/JavaScript/pageJump.js"></script>
+   <script src="/HomeJavascript/homeSearch.js"></script>
+   <script src="/JavaScript/philosophicHelper.js"></script>
+   <script src="/JavaScript/Misc.js"></script> 
 </html>
