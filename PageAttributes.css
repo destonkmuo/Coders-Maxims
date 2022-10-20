@@ -1,10 +1,11 @@
 html {
     position: relative;
-    animation: fadeInAnimation ease .5s;
+    animation: fadeInAnimation ease 2s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
     min-height: 112%;
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
@@ -14,6 +15,7 @@ body {
     display:flex;
     background-color: black;
     background-size: contain;
+    overflow-x: hidden;
 }    
 
 .nav-list {
@@ -60,6 +62,7 @@ body {
 main {
   display:flex;
   margin-bottom: 50vh;
+  overflow-x: hidden;
 }
 
 #philosophic-helper {
@@ -79,7 +82,7 @@ main {
   height: 500px;
   overflow-y: auto;
   position: fixed;
-  border-radius: 15px;
+  border-radius: 15px 15px 0px 0px;
   bottom:0%;
   outline-style: outset;
   outline-color: grey;
@@ -99,6 +102,9 @@ main {
   border:none;
 }
 
+#x-button:hover {
+  opacity: 50%;
+}
 .switch {
   position: fixed;
   display: inline-block;
@@ -167,7 +173,7 @@ footer {
   /* Set the fixed height of the footer here */
   height: 150px;
   background-color: rgba(0,5,20,200);
-  z-index: 3;
+  z-index: -1;
 }
 
 @keyframes fadeInAnimation {
@@ -323,10 +329,6 @@ footer {
   transition:.3s;
 }
 
-.low-nav-width-drop-down:hover button{
-  background-color:grey;
-}
-
 .low-nav-width-drop-down div{
   justify-content: center;
   align-items: center;
@@ -339,10 +341,10 @@ footer {
   width:36.25vw;
   height:50vh;
   opacity:0;
-  transition: 300ms ease-in-out;
   border-radius:10px;
-  pointer-events: none;
   left: 0%;
+  pointer-events: none;
+  transition: all 500ms ease-in-out;
 }
 
 .low-nav-width-drop-down:hover div{
@@ -421,3 +423,4 @@ footer {
   display: block;
   padding: 12.5px;
 }
+

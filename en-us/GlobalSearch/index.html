@@ -10,7 +10,9 @@
       <link rel="icon" href="/Static/descartes.png">
    </head>
    <body>
-    <main></main>
+    <main>
+      <div></div>
+    </main>
     <header class="header">
         <nav>
             <div id="ph">            
@@ -45,39 +47,41 @@
                        <!-- Example :<a href="Home.html" class="results-lists">Basic Computer History</a> -->
                     </ul>
                     <!-- Search Results Content (10 at most)-->
-                 </div>
                  <!-- Alternating "Search... "[Module Names EX:If Loop]" randomly from the Module json, Deletes its self and replaces it by the character-->
-              </li>
-              <li>
-                 <div class="low-nav-width-drop-down">
-                    <div id="drop-down-content">
-                       <!-- Inside the actual drop down -->
-                       <ul class="low-width-nav-list">
-                          <li><a href="../">Home</a></li>
-                          <li><a href="#">Modules</a></li>
-                          <li><a href="#">Overview</a></li>
-                          <li><a href="#">Resources</a></li>
-                          <li><a href="#">Projects</a></li>
-                          <li><a href="#">References</a></li>
-                          <li><a href="#">Contact</a></li>
-                       </ul>
-                    </div>
-                    <span><button id="low-nav-width-btn">☰</button></span> <!-- Outside of the dropdown-->
-                 </div>
-              </li>
+                </li>
               <!-- A Search form [API]; Uses Users Key Terms and Compares them to A Database of Related Webpages(Modules + Nav Pages) (All Webpages Will Have a Set of Key Terms Related to Their Existence)-->
            </ul>
+ <!-- Outside of the dropdown-->
            <!-- Add a helper bot that answers FAQ and sends emails -->
            <!-- Could be annoying so make it very transparent untill hovered over -->
            <!-- A one time greet that takes the user through the main page -->
         </nav>
+        
      </header>
+     
+     <div class="low-nav-width-drop-down">
+        <div id="drop-down-content">
+           <!-- Inside the actual drop down -->
+           <ul class="low-width-nav-list">
+              <li><a href="/">Home</a></li>
+              <li><a href="#">Modules</a></li>
+              <li><a href="#">Overview</a></li>
+              <li><a href="#">Resources</a></li>
+              <li><a href="#">Projects</a></li>
+              <li><a href="#">References</a></li>
+              <li><a href="#">Contact</a></li>
+           </ul>
+        </div>
+        <span><button id="low-nav-width-btn">☰</button></span>
+    </div>
      <footer>
         <!-- Random Quotes From Famous Programmers -->
         <p>programming fundamentals for all</p>
         <!-- link different social media pages -->
      </footer>
    </body>
+
+   
    
    <script src="/JavaScript/LowNavWidth.js"></script>
    <script src="/JavaScript/Search.js"></script>

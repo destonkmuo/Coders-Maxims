@@ -1,6 +1,6 @@
 main {
     margin-top: 30vh;
-    height: 300vh;
+    height: 400vh;
 }
 
 #black-hole {
@@ -113,7 +113,7 @@ main {
 .how-page-jump {
     background-color: white;
     width: 100%;
-    height: 28vh;
+    height: 29vh;
     border-radius: 10px;
     outline-style:solid;
     outline-color: white;
@@ -173,10 +173,10 @@ main {
     opacity: 75%;
 }
 
-#page-jump-intro-text {
-    margin-top: -5vh;
+#page-jump-intro-text{
     width: 100%;
     position: absolute;
+    font-size: 30px;
 }
 
 #page-jumps {
@@ -185,7 +185,7 @@ main {
     display: grid;
     gap: 3rem;
     padding: 50px;
-    margin-top: 11vh;
+    margin-top: 12vh;
 }
 
 
@@ -203,8 +203,8 @@ main {
 #page-jumps h3 {
     position:absolute;
     padding: 50px 0px;
-    font-size: 18px;
-    max-width: 50%;
+    font-size: 16px;
+    max-width: 30%;
 }
 
 #page-jumps p {
@@ -219,7 +219,7 @@ main {
 }
 
 #content-feed {
-    margin-top: 10vh;
+    margin-top: 20vh;
 }
 
 #home-search-box {
@@ -316,4 +316,104 @@ main {
 #tutorial-button:hover {
     color: white;
     opacity: 50%;
+}
+
+#youtube-playlist {
+    width: 45vw;
+    height: 80%;
+}
+
+#learn-container {
+    margin-top: 90vh;
+    position: absolute;
+}
+
+#student-img {
+    width:30%;
+    opacity:0%;
+    margin-left: 50%;
+    margin-top: 10vh;
+    transition: opacity 500ms ease-in-out;
+}
+
+#low-height-page-jumps {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    transition: all 500ms ease-in-out;
+    opacity: 0%;
+    z-index: 1;
+}
+
+.low-height-page-jump-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 3.8%;
+    list-style:none;
+    
+}
+
+.low-height-page-jump-list li {
+    font-size: 120%;
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    background-color: black;
+    border-radius: 10px 10px 0px 0px;
+    width: 15%;
+    height: 30px;
+    outline: outset;
+    outline-color: grey;
+    transition: all 500ms ease-in-out;
+    text-align: center;
+    font-weight: 200;
+}
+
+.low-height-page-jump-list li:hover {
+
+    opacity: 50%;
+
+}
+
+#end-of-container-strip {
+    width: 100%;
+    height: 170px;
+    background-image: linear-gradient(white, black);
+    border-radius: 15px;
+    position: absolute;
+}
+
+#end-of-container-strip p {
+    color: white;
+    text-align: right;
+    font-size: 13vh;
+    margin-right: 5%;
+    text-shadow: 0 4px 8px rgba(0,0,0,0.8);
+}
+
+#learn-content {
+
+    height: 80%;
+    width: 40%;
+    background-color:rgb(20,20,20);
+    border-radius: 15px;
+    left: 5vw;
+    top: 21%;
+    position: absolute;
+    outline-style: outset;
+    outline-color: white;
+    z-index: 1;
+
+}
+
+#horizon {
+    width:50%;
+    position: absolute;
+    right: 5%;
+    margin-top: 35vh;
+    z-index: -1;
+    transition: opacity 500ms ease-in-out;
 }

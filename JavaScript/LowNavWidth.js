@@ -1,13 +1,6 @@
-var navList;
-var button;
-var dropDown;
-var width, height;
-
-
-
 var navList = document.getElementsByClassName('nav-list-item');
 var button = document.getElementById('low-nav-width-btn');
-var dropDown = document.getElementsByClassName('low-nav-width-drop-down');
+var dropDown = document.getElementById('drop-down-content');
 var windowSubThresh = false;
 window.onresize = window.onload = document.onmouseover = function() {
         width = window.innerWidth;
@@ -29,14 +22,7 @@ window.onresize = window.onload = document.onmouseover = function() {
         }
     } 
     button.onclick = function() {
-        if(!windowSubThresh){
-        dropDown[0].style.visibility = "visible";
-        dropDown[0].style.pointerEvents = all;
-
-        }  
+        dropDown.style.visibility = "visible";
+        dropDown.style.pointerEvents = "all";
       }
 
-    dropDown[0].onmouseleave = function() { 
-        if(!windowSubThresh) 
-        dropDown[0].style.pointerEvents = none;
-    }

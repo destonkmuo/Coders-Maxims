@@ -15,7 +15,7 @@ function Search() {
     document.getElementById("input-search").addEventListener("keyup", function(event) {
         event.preventDefault();
         if (event.key === 'Enter' && input != "") {
-            window.location.href = `/en-us/Search/?search=${input}`;
+            window.location.href = `/en-us/GlobalSearch/?search=${input}`;
         }
     });
 
@@ -25,13 +25,12 @@ function Search() {
 
             for (let modulesIndex = 0; modulesIndex < modules.length; modulesIndex++) {
                 if (input == " " || results.has(modules[modulesIndex].href)) {
-                    if(devLog) { console.error(`Results Contains Space or Already Contains User Input... Resetting: ${results}, Or Space Is The Only Input`) }
+                    if(devLog) { console.error(`Results Contains Space or Already Contains User Input... Resetting: ${results}`) }
                     resetResults();
-                    return;
-                } else if(modules[modulesIndex].keyTerms.filter(keyTerms => keyTerms.startsWith(input)).length > 0 && input.length > 0){
+                } else if(modules[modulesIndex].keyTerms.filter(keyTerms => keyTerms.startsWith(input)).length > 0 && input.length > 0 && results.size < 8){
                     if(devLog) { console.log(`Found ${modules[modulesIndex].name}... Appending Potential href`) }
                     results.add(modules[modulesIndex].href);
-                } else if((modules[modulesIndex].name.replace(' ','').toLowerCase().startsWith(input.replace(' ',''))) && input.length > 0){
+                } else if((modules[modulesIndex].name.replace(' ','').toLowerCase().startsWith(input.replace(' ',''))) && input.length > 0 && results.size < 8){
                     if(devLog) { console.log(`Found ${modules[modulesIndex].name}... Appending Potential href`) }
                     results.add(modules[modulesIndex].href);
                 }

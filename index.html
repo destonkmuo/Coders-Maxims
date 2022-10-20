@@ -24,10 +24,10 @@
             <ul id="home-search-results-content"></ul>
          </div>
 
-         <button id="tutorial-button" onclick="jumpTo('page-jumps')">💫 ↓  Let's Go!  ↓ 💫</button>
-         
+         <button id="tutorial-button" onclick="jumpTo('page-jumps')"> ↓  Learn More  ↓</button>
+
          <div id="page-jumps">
-            <button class="learn-page-jump" onclick="jumpTo('content-feed')">
+            <button class="learn-page-jump" onclick="jumpTo('learn-container')">
                <img src="Static/learnIcon.png">
                <h2 id="pp">Learn</h2>
                <h3>Self Paced Learning</h3>  
@@ -51,15 +51,25 @@
                <p>Learn why I decided to create this website and more about my endeavors and current résumé.</p>
             </button>
          </div>
-         <h1 id="page-jump-intro-text">Click A Tab To Navigate</h1>
+         <h4 id="page-jump-intro-text">Click A Tab To Navigate</h4>
          <div id="content-feed">
             <div class="recent-modules">
                <ul id="rm-list">
                   <!-- Consist Of The Top 7 Most Recently Updated Or Created Modules, Entire Thing Will Be A Seperate Document Within A Iframe Tag-->
                </ul>
             </div>
-            <div class="social-media-feed"></div>
-            <!-- Youtube & Twitter API-->
+            <div class="social-media-feed">
+               <script src="https://apis.google.com/js/platform.js"></script>
+               <div class="g-ytsubscribe" data-channelid="UC3T2hy9GpimODTeeuMV3rqA" data-layout="full" data-theme="default" data-count="default"></div>
+               <a href="https://twitter.com/dkmuo?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @dkmuo</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
+         </div>
+
+         <div id="learn-container">
+            <div id="learn-content"></div>
+            <img src="Static/horizon.png" id="horizon">
+            <img src="Static/computerScienceStudent.jpg" id="student-img">
+            <div id="end-of-container-strip"><p>Learn</p></div>
          </div>
       </main>
       <header>
@@ -78,8 +88,8 @@
             <div id="nav-visibility-bar"></div>
             <!-- Contains Home (Update Notes), Modules, Overview, Resources, Projects, References [API], About Me, Contact -->
             <ul class="nav-list">
-               <li class="nav-list-item"><a href="../"><img src="Static/CodersMaximsLogo.png" id="HeaderLogo"></img></a></li>
-               <li class="nav-list-item"><a href="../">Home</a></li>
+               <li class="nav-list-item"><a href="/"><img src="Static/CodersMaximsLogo.png" id="HeaderLogo"></img></a></li>
+               <li class="nav-list-item"><a href="/">Home</a></li>
                <li class="nav-list-item"><a href="#">Modules</a></li>
                <li class="nav-list-item"><a href="#">Overview</a></li>
                <li class="nav-list-item"><a href="#">Resources</a></li>
@@ -104,7 +114,7 @@
                      <div id="drop-down-content">
                         <!-- Inside the actual drop down -->
                         <ul class="low-width-nav-list">
-                           <li><a href="../">Home</a></li>
+                           <li><a href="/">Home</a></li>
                            <li><a href="#">Modules</a></li>
                            <li><a href="#">Overview</a></li>
                            <li><a href="#">Resources</a></li>
@@ -122,6 +132,14 @@
             <!-- Could be annoying so make it very transparent untill hovered over -->
             <!-- A one time greet that takes the user through the main page -->
          </nav>
+         <div id="low-height-page-jumps">
+            <ul class="low-height-page-jump-list">
+               <li onclick="jumpTo('learn-container')">Learn</li>
+               <li onclick="jumpTo('learn-container')">How</li>
+               <li onclick="jumpTo('learn-container')">Practice</li>
+               <li onclick="jumpTo('learn-container')">Why</li>
+            </ul>
+         </div>
       </header>
       <footer>
          <!-- Random Quotes From Famous Programmers -->
@@ -134,7 +152,10 @@
    <script src="/JavaScript/recentModules.js"></script>
    <script src="/JavaScript/Search.js"></script>
    <script src="/JavaScript/pageJump.js"></script>
-   <script src="/HomeJavascript/homeSearch.js"></script>
    <script src="/JavaScript/philosophicHelper.js"></script>
    <script src="/JavaScript/Misc.js"></script> 
+
+   <script src="/HomeJavascript/homeSearch.js"></script>
+   <script src="/HomeJavascript/movingImages.js"></script>
+
 </html>
