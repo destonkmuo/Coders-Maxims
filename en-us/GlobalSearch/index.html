@@ -11,10 +11,15 @@
    </head>
    <body>
     <main>
-      <div></div>
+      <div id="gsrc-container"></div>
+      <div class="pagination"></div>
     </main>
     <header class="header">
         <nav>
+         <div id="loading-window">
+            <img src="/Static/CodersMaximsLogo.png" id="loading-logo">
+            <div class="loading-circle"></div>
+         </div>
             <div id="ph">            
                 <button onclick="phContent()"><img src="/Static/homeGraphic.png" id="philosophic-helper"/></button>
                 <div id="ph-content">
@@ -82,12 +87,13 @@
    </body>
 
    
-   
+   <!-- A template for Navigation Bar -->
    <script src="/JavaScript/LowNavWidth.js"></script>
    <script src="/JavaScript/Search.js"></script>
    <script src="/JavaScript/Misc.js"></script> 
    <script src="/JavaScript/pageJump.js"></script>
    <script src="/JavaScript/philosophicHelper.js"></script>
+   <script src="/JavaScript/loadingScreen.js"></script>
 
    <script src="Javascript/globalSearch.js"></script>
 </html>

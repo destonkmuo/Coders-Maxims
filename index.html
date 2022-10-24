@@ -24,58 +24,66 @@
             <ul id="home-search-results-content"></ul>
          </div>
 
-         <button id="tutorial-button" onclick="jumpTo('page-jumps')"> ↓  Learn More  ↓</button>
+         <button id="tutorial-button" onclick="jumpTo('page-jumps', 150)">Learn More</button>
 
-         <div id="page-jumps">
-            <button class="learn-page-jump" onclick="jumpTo('learn-container')">
-               <img src="Static/learnIcon.png">
-               <h2 id="pp">Learn</h2>
-               <h3>Self Paced Learning</h3>  
-               <p>Students may learn through the self guided modules or search for specific concepts to improve their knowledge of CS.</p>
-            </button> 
-            <button class="how-page-jump" onclick="jumpTo('page-jumps')">
-               <img src="Static/howIcon.png">
-               <h2>How</h2>
-               <h3>Interactive Articles, Assignments, and Videos</h3>  
-               <P>Students will learn via the modules containing in-depth visualizations and explanations of CS concepts.</p></button>
-            <button class="practice-page-jump" onclick="jumpTo('page-jumps')">
-               <img src="Static/practiceIcon.png">
-               <h2>Practice</h2>
-               <h3>Assignments & Tests</h3>  
-               <P>Students will take EOM's, or end of module exams, that test their knowledge of the topic based on core fundamentals that are easily misconstrued.</p>
-            </button>
-            <button class="why-page-jump" onclick="jumpTo('page-jumps')">
-               <img src="Static/whyIcon.png">
-               <h2>Why</h2>
-               <h3>Why Was This Website Created</h3>  
-               <p>Learn why I decided to create this website and more about my endeavors and current résumé.</p>
-            </button>
+         <div id="page-jumps-container">
+            <div id="pj-text-container"><h4 id="page-jump-intro-text">Click A Tab To Navigate</h4></div>
+
+            <div id="page-jumps">
+               <button class="learn-page-jump" onclick="jumpTo('learn-container', 250)">
+                  <img src="Static/learnIcon.png">
+                  <h2 id="pp">Learn</h2>
+                  <h3>Self Paced Learning</h3>  
+                  <p>Students may learn through the self guided modules or search for specific concepts to improve their knowledge of CS.</p>
+               </button> 
+               <button class="how-page-jump" onclick="jumpTo('page-jumps', 150)">
+                  <img src="Static/howIcon.png">
+                  <h2>How</h2>
+                  <h3>Interactive Articles, Assignments, and Videos</h3>  
+                  <P>Students will learn via the modules containing in-depth visualizations and explanations of CS concepts.</p></button>
+               <button class="practice-page-jump" onclick="jumpTo('page-jumps', 150)">
+                  <img src="Static/practiceIcon.png">
+                  <h2>Practice</h2>
+                  <h3>Assignments & Tests</h3>  
+                  <P>Students will take EOM's, or end of module exams, that test their knowledge of the topic based on core fundamentals that are easily misconstrued.</p>
+               </button>
+               <button class="why-page-jump" onclick="jumpTo('page-jumps', 150)">
+                  <img src="Static/whyIcon.png">
+                  <h2>Why</h2>
+                  <h3>Why Was This Website Created</h3>  
+                  <p>Learn why I decided to create this website and more about my endeavors and current résumé.</p>
+               </button>
+            </div>
          </div>
-         <h4 id="page-jump-intro-text">Click A Tab To Navigate</h4>
          <div id="content-feed">
             <div class="recent-modules">
+               <div id="rm-tab">Website Updates</div>               
                <ul id="rm-list">
                   <!-- Consist Of The Top 7 Most Recently Updated Or Created Modules, Entire Thing Will Be A Seperate Document Within A Iframe Tag-->
                </ul>
             </div>
             <div class="social-media-feed">
-               <script src="https://apis.google.com/js/platform.js"></script>
-               <div class="g-ytsubscribe" data-channelid="UC3T2hy9GpimODTeeuMV3rqA" data-layout="full" data-theme="default" data-count="default"></div>
-               <a href="https://twitter.com/dkmuo?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @dkmuo</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+               <div id="sm-tab">Social Media Updates</div> 
+               <div id="twitter-feed"><a class="twitter-timeline" href="https://twitter.com/CodersMaxims?ref_src=twsrc%5Etfw"></a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div>
+               <iframe class="yt-channel" src="https://www.youtube.com/embed/videoseries?list=PLU-mFGPI-GM5fzqgihbwV1EdMQheJx-oP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
          </div>
 
          <div id="learn-container">
             <div id="learn-content"></div>
             <img src="Static/horizon.png" id="horizon">
-            <img src="Static/computerScienceStudent.jpg" id="student-img">
+            <img src="Static/computerScienceStudent.png" id="student-img">
             <div id="end-of-container-strip"><p>Learn</p></div>
          </div>
       </main>
       <header>
          <nav>
+            <div id="loading-window">
+               <img src="/Static/CodersMaximsLogo.png" id="loading-logo">
+               <div class="loading-circle"></div>
+            </div>
             <div id="ph">            
-               <button onclick="phContent()"><img src="Static/homeGraphic.png" id="philosophic-helper"/></button>
+               <div id="ph-button"><button onclick="phContent()"><img src="Static/philoHelper.png" id="philosophic-helper"/></button></div>
                <div id="ph-content">
                   <button id="x-button"onclick="closePHContent()"><img id="x-button" src="Static/xbutton.png"></button>
                </div>
@@ -88,7 +96,7 @@
             <div id="nav-visibility-bar"></div>
             <!-- Contains Home (Update Notes), Modules, Overview, Resources, Projects, References [API], About Me, Contact -->
             <ul class="nav-list">
-               <li class="nav-list-item"><a href="/"><img src="Static/CodersMaximsLogo.png" id="HeaderLogo"></img></a></li>
+               <li class="nav-list-item"><a href="/"><img src="Static/CodersMaximsLogo.png" id="HeaderLogo"></a></li>
                <li class="nav-list-item"><a href="/">Home</a></li>
                <li class="nav-list-item"><a href="#">Modules</a></li>
                <li class="nav-list-item"><a href="#">Overview</a></li>
@@ -105,7 +113,7 @@
                      <ul id="search-results-content">
                         <!-- Example :<a href="Home.html" class="results-lists">Basic Computer History</a> -->
                      </ul>
-                     <!-- Search Results Content (10 at most)-->
+                     <!-- Search Results Content (8 at most)-->
                   </div>
                   <!-- Alternating "Search... "[Module Names EX:If Loop]" randomly from the Module json, Deletes its self and replaces it by the character-->
                </li>
@@ -132,14 +140,6 @@
             <!-- Could be annoying so make it very transparent untill hovered over -->
             <!-- A one time greet that takes the user through the main page -->
          </nav>
-         <div id="low-height-page-jumps">
-            <ul class="low-height-page-jump-list">
-               <li onclick="jumpTo('learn-container')">Learn</li>
-               <li onclick="jumpTo('learn-container')">How</li>
-               <li onclick="jumpTo('learn-container')">Practice</li>
-               <li onclick="jumpTo('learn-container')">Why</li>
-            </ul>
-         </div>
       </header>
       <footer>
          <!-- Random Quotes From Famous Programmers -->
@@ -149,13 +149,14 @@
    </body>
    <!--<script src="DarkMode.js"></script> Add A Color Changer, Everything But White-->
    <script src="/JavaScript/LowNavWidth.js"></script>
-   <script src="/JavaScript/recentModules.js"></script>
    <script src="/JavaScript/Search.js"></script>
    <script src="/JavaScript/pageJump.js"></script>
    <script src="/JavaScript/philosophicHelper.js"></script>
    <script src="/JavaScript/Misc.js"></script> 
+   <script src="/JavaScript/loadingScreen.js"></script>
 
    <script src="/HomeJavascript/homeSearch.js"></script>
    <script src="/HomeJavascript/movingImages.js"></script>
+   <script src="/HomeJavascript/recentModules.js"></script>
 
 </html>

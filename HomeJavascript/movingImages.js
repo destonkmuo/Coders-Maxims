@@ -1,16 +1,16 @@
 window.addEventListener("scroll", (event) => {
     var userScrollHeight = Math.floor(this.scrollY);
+    var container = document.getElementById('learn-container');
     var learnImageContainer = document.getElementById('student-img');
     
-    var containerPosition = learnImageContainer.offsetTop;
+    var containerPosition = container.offsetTop;
 
-    const learnImageContainerStartPos = 1100;
-    const learnImageContainerStopPos = 2400;
-    console.log(userScrollHeight);
+    const learnImageContainerStartPos = 0;
+    const learnImageContainerStopPos = containerPosition;
 
     if(userScrollHeight > learnImageContainerStartPos && userScrollHeight < learnImageContainerStopPos){
         learnImageContainer.style.opacity = `${(userScrollHeight - learnImageContainerStartPos)/(learnImageContainerStopPos - learnImageContainerStartPos)}`; 
-        if(window.innerWidth > 1275 && userScrollHeight > 1850){learnImageContainer.style.marginLeft = `${learnImageContainerStartPos - userScrollHeight + 1800}px`} // Flip The Variables to Change where it's coming from
+        if(window.innerWidth > 1275 && userScrollHeight > 2700){learnImageContainer.style.marginLeft = `${learnImageContainerStartPos - userScrollHeight + 4000}px`} // Flip The Variables to Change where it's coming from
     }
 
     if(userScrollHeight > 850 && window.innerWidth > 1275) {

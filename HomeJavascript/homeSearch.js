@@ -1,15 +1,17 @@
 function HomeSearch() {
-    var searchResultsContent = document.getElementById('home-search-results-content');
-    var searchBox = document.getElementById('home-search-box');
+    const searchResultsContent = document.getElementById('home-search-results-content');
+    const searchBox = document.getElementById('home-search-box');
+    const devLog = false;
+
+    var input = document.getElementById("home-input-search").value.toLowerCase();
     var results = new Set();
-  
-    var devLog = false;
   
     function resetResults() {
         while (searchResultsContent.firstChild) {searchResultsContent.removeChild(searchResultsContent.lastChild) }
-        results = new Set();
+        results.clear();
     }
   
+
     document.getElementById("home-input-search").addEventListener("keyup", function(event) {
         event.preventDefault();
         if (event.key === 'Enter' && input != "") {
@@ -17,30 +19,26 @@ function HomeSearch() {
         }
     });
 
-    var input = document.getElementById("home-input-search").value.toLowerCase();
     fetch("Metadata/Modules.json")
         .then(response => response.json())
         .then(modules => {
             for (let modulesIndex = 0; modulesIndex < modules.length; modulesIndex++) {
-                if (input == " " || results.has(modules[modulesIndex].href)) {
-                    if(devLog) { console.error(`Results Already Contains User Input... Resetting: ${results}, Or Space Is The Only Input`) }
-                    resetResults();
-                    return;
-                } else if(modules[modulesIndex].keyTerms.filter(keyTerms => keyTerms.startsWith(input)).length > 0 && input.length > 0){
-                    if(devLog) { console.log(`Found ${modules[modulesIndex].name}... Appending Potential href`) }
-                    results.add(modules[modulesIndex].href);
-                } else if((modules[modulesIndex].name.replace(' ','').toLowerCase().startsWith(input.replace(' ',''))) && input.length > 0){
-                    if(devLog) { console.log(`Found ${modules[modulesIndex].name}... Appending Potential href`) }
-                    results.add(modules[modulesIndex].href);
-                }
-                
-                if (results.has(modules[modulesIndex].href)) {
+
+                function instantiateResult() {
                     var searchResult = document.createElement("a");
-                    searchResult.innerHTML = modules[modulesIndex].name;
+                    searchResult.innerHTML = `🔍︎ ${modules[modulesIndex].name}`;
                     searchResult.href = modules[modulesIndex].href;
                     searchResult.className = "home-results-lists";
                     document.body.appendChild(searchResult);
                     searchResultsContent.appendChild(searchResult);
+                }
+
+                if (input == " " || results.has(modules[modulesIndex].href)) {
+                    if(devLog) console.error(`Results Contains Space or Already Contains User Input... Resetting: ${results}`) 
+                }  else if((modules[modulesIndex].name.toLowerCase().includes(input)) && input.length > 0 && results.size < 6){
+                    if(devLog) console.log(`Found ${modules[modulesIndex].name}... Appending Potential href`) 
+                    results.add(modules[modulesIndex].href);
+                    instantiateResult();
                 }
             }
   
@@ -61,7 +59,7 @@ function HomeSearch() {
             searchBox.onmouseleave = function() { visibility(false) }
         })
   
-    if(devLog) { console.log(`Search Request Complete: ${results.values()}`); }
+    if(devLog) console.log(`Search Request Complete: ${Array.from(results.values())}`);
     resetResults();
   }
   
@@ -70,7 +68,7 @@ function HomeSearch() {
   var currentSecArrPos = 0;
   var arrOfWordsPostion = 0;
   var timeSpeed = 150;
-  var arrOfWords = [["H","e","l","l","o"," ","W","o","r","l","d"," "," "," "],["F","o","r"," ","L","o","o","p","s"," "," "," "],["A","l","g","o","r","i","t","m","s"," "," "," "],["D", "a", "t", "a"," ", "S", "t", "r", "u", "c", "t", "u", "r", "e","s"," "," "," "],["C", "o", "m", "p", "u", "t", "e", "r"," ", "H", "i", "s", "t", "o", "r", "y"," "," "," "]];
+  var arrOfWords = [["H","e","l","l","o"," ","W","o","r","l","d"," "," "," "],["A","l","g","o","r","i","t","m","s"," "," "," "],["D", "a", "t", "a"," ", "S", "t", "r", "u", "c", "t", "u", "r", "e","s"," "," "," "],["C", "o", "m", "p", "u", "t", "e", "r"," ", "H", "i", "s", "t", "o", "r", "y"," "," "," "]];
   var interval = setInterval(function(){
   document.getElementById("home-input-search").placeholder = `Search... ${currentString.join("")}`;
   
