@@ -27,6 +27,13 @@ window.addEventListener('load', function() {
                             searchResult.className = "results-lists";
                             document.body.appendChild(searchResult);
                             document.getElementsByClassName(`global-search-results-content ${paginationCount}`)[0].appendChild(searchResult);
+
+                            var searchResultDescription = document.createElement('p');
+                            searchResultDescription.innerHTML = modules[modulesIndex].description;
+                            searchResultDescription.id = "searchResultDescription";
+                            searchResultDescription.className = "results-lists";
+                            document.body.appendChild(searchResultDescription);
+                            document.getElementsByClassName(`global-search-results-content ${paginationCount}`)[0].appendChild(searchResultDescription);
                             urlCount += 1;
                     } else {
                         paginationCount += 1;
