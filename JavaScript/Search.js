@@ -23,7 +23,7 @@ function Search() {
         .then(modules => {
 
             for (let modulesIndex = 0; modulesIndex < modules.length; modulesIndex++) {
-                if (results.has(modules[modulesIndex].href || input == " ")) {
+                if (results.includes(modules[modulesIndex].href || input == " ")) {
                     if(devLog) console.error(`Results Contains Space or Already Contains User Input... Resetting: ${results}`);
                     resetResults();
                 }  else if((modules[modulesIndex].name.toLowerCase().includes(input)) && input.length > 0 && results.size < 6) {
@@ -31,7 +31,7 @@ function Search() {
                     results.push([modules[modulesIndex].href, modules[modulesIndex].name]);
                 }
             }
-
+            
             for(let i = 0; i < results.size; i++) {
                 var searchResult = document.createElement("a");
                 searchResult.innerHTML = `🔍︎ ${results[i][1]}`;
