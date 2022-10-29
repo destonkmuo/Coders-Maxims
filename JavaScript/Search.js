@@ -41,7 +41,6 @@ function Search() {
                     if(devLog) console.log(`Found ${modules[modulesIndex].name}... Appending Potential href`);
                     results.add(modules[modulesIndex].href);
                     instantiateResult();
-                    return;
                 }
             }
 
