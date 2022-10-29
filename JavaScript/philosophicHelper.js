@@ -44,7 +44,7 @@ function phLS() {
 }
 
 window.addEventListener('load', function() {
-    if (!sessionStorage.isNewSession) {
+    if (localStorage.getItem("isHelperHidden") == "null") {
         localStorage.setItem("isHelperHidden", false);
     }
     localStorage.getItem("isHelperHidden") == "true" ? phCheckBox.checked = false : phCheckBox.checked = true;
