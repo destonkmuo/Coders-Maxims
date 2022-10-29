@@ -23,12 +23,21 @@ function Search() {
         .then(modules => {
 
             for (let modulesIndex = 0; modulesIndex < modules.length; modulesIndex++) {
-                if (results.includes(modules[modulesIndex].href || input == "")) {
+                if (results.includes(modules[modulesIndex].href) || input == "") {
                     if(devLog) console.error(`Results Contains Space or Already Contains User Input... Resetting: ${results}`);
                 }  else if((modules[modulesIndex].name.toLowerCase().includes(input)) && input.length > 0 && results.length < 6) {
                     if(devLog) console.log(`Found ${modules[modulesIndex].name}... Appending Potential href`);
                     results.push([modules[modulesIndex].href, modules[modulesIndex].name]);
                 }
+            }
+
+            for(let i = 0; i < results.length; i++) {
+                var searchResult = document.createElement("a");
+                searchResult.innerHTML = `🔍︎ ${results[i][1]}`;
+                searchResult.href = results[i][0];
+                searchResult.className = "results-lists";
+                document.body.appendChild(searchResult);
+                searchResultsContent.appendChild(searchResult);
             }
 
             function visibility(boolean) {
@@ -47,14 +56,5 @@ function Search() {
             searchButton.onmousedown = function() { if (results.length > 0) { visibility(true) }}
             searchButton.onmouseleave = function() { visibility(false) }
         })
-
-        for(let i = 0; i < results.length; i++) {
-            var searchResult = document.createElement("a");
-            searchResult.innerHTML = `🔍︎ ${results[i][1]}`;
-            searchResult.href = results[i][0];
-            searchResult.className = "results-lists";
-            document.body.appendChild(searchResult);
-            searchResultsContent.appendChild(searchResult);
-        }
     resetResults();
 }
