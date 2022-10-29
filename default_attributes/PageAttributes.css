@@ -225,12 +225,11 @@ footer {
 
 /* width */
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 8px;
 }
   
   /* Track */
 ::-webkit-scrollbar-track {
-    background: black;
 }
   
   /* Handle */
@@ -241,7 +240,6 @@ footer {
   
   /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: rgba(0,0,0,1);
 }
 
 *{
