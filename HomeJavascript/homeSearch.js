@@ -35,7 +35,7 @@ function HomeSearch() {
 
                 if (results.has(modules[modulesIndex].href || input == "")) {
                     if(devLog) console.error(`Results Contains Space or Already Contains User Input... Resetting: ${results}`) 
-                }  else if((modules[modulesIndex].name.toLowerCase().includes(input)) && input.length > 0 && results.size < 6){
+                }  else if((modules[modulesIndex].name.toLowerCase().includes(input)) && input.length > 0 && results.size < 6 && results.has(modules[modulesIndex].href)){
                     if(devLog) console.log(`Found ${modules[modulesIndex].name}... Appending Potential href`) 
                     results.add(modules[modulesIndex].href);
                     instantiateResult();
