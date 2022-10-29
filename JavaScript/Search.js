@@ -4,11 +4,11 @@ function Search() {
     const devLog = true;
 
     var input = document.getElementById("input-search").value.toLowerCase();
-    var results = new Set();
+    var results = [];
 
     function resetResults() {
         while (searchResultsContent.firstChild) {searchResultsContent.removeChild(searchResultsContent.lastChild) }
-        results.clear();
+        results = [];
     }
 
     document.getElementById("input-search").addEventListener("keyup", function(event) {
@@ -23,29 +23,23 @@ function Search() {
         .then(modules => {
 
             for (let modulesIndex = 0; modulesIndex < modules.length; modulesIndex++) {
-                
-                function instantiateResult() {
-                    var searchResult = document.createElement("a");
-                    searchResult.innerHTML = `🔍︎ ${modules[modulesIndex].name}`;
-                    searchResult.href = modules[modulesIndex].href;
-                    searchResult.className = "results-lists";
-                    document.body.appendChild(searchResult);
-                    searchResultsContent.appendChild(searchResult);
-                }
-
                 if (results.has(modules[modulesIndex].href || input == " ")) {
                     if(devLog) console.error(`Results Contains Space or Already Contains User Input... Resetting: ${results}`);
                     resetResults();
                 }  else if((modules[modulesIndex].name.toLowerCase().includes(input)) && input.length > 0 && results.size < 6) {
                     if(devLog) console.log(`Found ${modules[modulesIndex].name}... Appending Potential href`);
-                    if(!results.has(modules[modulesIndex].href)) {
-                        results.add(modules[modulesIndex].href);
-                        instantiateResult();
-                    }
+                    results.push([modules[modulesIndex].href, modules[modulesIndex].name]);
                 }
             }
 
-            console.log(results);
+            for(let i = 0; i < results.size; i++) {
+                var searchResult = document.createElement("a");
+                searchResult.innerHTML = `🔍︎ ${results[i][1]}`;
+                searchResult.href = results[i][0];
+                searchResult.className = "results-lists";
+                document.body.appendChild(searchResult);
+                searchResultsContent.appendChild(searchResult);
+            }
 
             function visibility(boolean) {
                 if (boolean) {
