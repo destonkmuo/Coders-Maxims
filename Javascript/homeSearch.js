@@ -25,12 +25,14 @@ function HomeSearch() {
             for (let modulesIndex = 0; modulesIndex < modules.length; modulesIndex++) {
 
                 function instantiateResult() {
+                    if(searchResultsContent.childNodes.length < results.size) {
                     var searchResult = document.createElement("a");
                     searchResult.innerHTML = `🔍︎ ${modules[modulesIndex].name}`;
                     searchResult.href = modules[modulesIndex].href;
                     searchResult.className = "home-results-lists";
                     document.body.appendChild(searchResult);
                     searchResultsContent.appendChild(searchResult);
+                    }
                 }
 
                 if (results.has(modules[modulesIndex].href || input == "")) {
