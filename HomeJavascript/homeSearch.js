@@ -33,7 +33,7 @@ function HomeSearch() {
                     searchResultsContent.appendChild(searchResult);
                 }
 
-                if (input == " " || results.has(modules[modulesIndex].href)) {
+                if (results.has(modules[modulesIndex].href || input == "")) {
                     if(devLog) console.error(`Results Contains Space or Already Contains User Input... Resetting: ${results}`) 
                 }  else if((modules[modulesIndex].name.toLowerCase().includes(input)) && input.length > 0 && results.size < 6){
                     if(devLog) console.log(`Found ${modules[modulesIndex].name}... Appending Potential href`) 
