@@ -1,7 +1,7 @@
 function Search() {
     const searchResultsContent = document.getElementById('search-results-content');
     const searchButton = document.getElementById('search-button');
-    const devLog = false;
+    const devLog = true;
 
     var input = document.getElementById("input-search").value.toLowerCase();
     var results = new Set();
