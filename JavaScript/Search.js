@@ -4,16 +4,16 @@ function Search() {
     const devLog = true;
 
     var input = document.getElementById("input-search").value.toLowerCase();
-    var results = [];
+    var results = new Set();
 
     function resetResults() {
         while (searchResultsContent.firstChild) {searchResultsContent.removeChild(searchResultsContent.lastChild) }
-        results = [];
+        results.clear();
     }
 
     document.getElementById("input-search").addEventListener("keyup", function(event) {
         event.preventDefault();
-        if (event.key === 'Enter' && input != "") {
+        if (event.key === 'Enter' && input != " ") {
             window.location.href = `/s_dir/GlobalSearch/?search=${input}`;
         }
     });
@@ -23,21 +23,24 @@ function Search() {
         .then(modules => {
 
             for (let modulesIndex = 0; modulesIndex < modules.length; modulesIndex++) {
-                if (results.includes(modules[modulesIndex].href) || input == "") {
-                    if(devLog) console.error(`Results Contains Space or Already Contains User Input... Resetting: ${results}`);
-                }  else if((modules[modulesIndex].name.toLowerCase().includes(input)) && input.length > 0 && results.length < 6) {
-                    if(devLog) console.log(`Found ${modules[modulesIndex].name}... Appending Potential href`);
-                    results.push([modules[modulesIndex].href, modules[modulesIndex].name]);
+                
+                function instantiateResult() {
+                    var searchResult = document.createElement("a");
+                    searchResult.innerHTML = `🔍︎ ${modules[modulesIndex].name}`;
+                    searchResult.href = modules[modulesIndex].href;
+                    searchResult.className = "results-lists";
+                    document.body.appendChild(searchResult);
+                    searchResultsContent.appendChild(searchResult);
                 }
-            }
 
-            for(let i = 0; i < results.length; i++) {
-                var searchResult = document.createElement("a");
-                searchResult.innerHTML = `🔍︎ ${results[i][1]}`;
-                searchResult.href = results[i][0];
-                searchResult.className = "results-lists";
-                document.body.appendChild(searchResult);
-                searchResultsContent.appendChild(searchResult);
+                if (results.has(modules[modulesIndex].href) || input == " ") {
+                    if(devLog) console.error(`Results Contains Space or Already Contains User Input... Resetting: ${results}`);
+                    resetResults();
+                }  else if((modules[modulesIndex].name.toLowerCase().includes(input)) && input.length > 0 && results.size < 6) {
+                    if(devLog) console.log(`Found ${modules[modulesIndex].name}... Appending Potential href`);
+                    results.add(modules[modulesIndex].href);
+                    instantiateResult();
+                }
             }
 
             function visibility(boolean) {
@@ -52,8 +55,8 @@ function Search() {
                 }
             }
 
-            results.length > 0 ? visibility(true) : visibility(false);
-            searchButton.onmousedown = function() { if (results.length > 0) { visibility(true) }}
+            results.size > 0 ? visibility(true) : visibility(false);
+            searchButton.onmousedown = function() { if (results.size > 0) { visibility(true) }}
             searchButton.onmouseleave = function() { visibility(false) }
         })
     resetResults();
