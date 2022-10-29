@@ -13,7 +13,7 @@ function Search() {
 
     document.getElementById("input-search").addEventListener("keyup", function(event) {
         event.preventDefault();
-        if (event.key === 'Enter' && input != "") {
+        if (event.key === 'Enter' && input != " ") {
             window.location.href = `/s_dir/GlobalSearch/?search=${input}`;
         }
     });
@@ -25,6 +25,7 @@ function Search() {
             for (let modulesIndex = 0; modulesIndex < modules.length; modulesIndex++) {
                 
                 function instantiateResult() {
+                    resetResults();
                     var searchResult = document.createElement("a");
                     searchResult.innerHTML = `🔍︎ ${modules[modulesIndex].name}`;
                     searchResult.href = modules[modulesIndex].href;
@@ -33,7 +34,7 @@ function Search() {
                     searchResultsContent.appendChild(searchResult);
                 }
 
-                if (results.has(modules[modulesIndex].href || input == "")) {
+                if (results.has(modules[modulesIndex].href || input == " ")) {
                     if(devLog) console.error(`Results Contains Space or Already Contains User Input... Resetting: ${results}`);
                     resetResults();
                 }  else if((modules[modulesIndex].name.toLowerCase().includes(input)) && input.length > 0 && results.size < 6) {
