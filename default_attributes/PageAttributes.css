@@ -128,7 +128,7 @@ main {
   transition: all 250ms ease-in-out;
   pointer-events: none;
   margin-left: 4px;
-  z-index: 3;
+  z-index: 4;
 }
 
 #x-button {
