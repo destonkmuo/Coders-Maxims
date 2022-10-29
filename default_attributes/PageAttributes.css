@@ -7,8 +7,8 @@ html {
 }
 
 body {
-    background-image: url(/Static/starryBackground.jpg);
-    background-repeat: repeat; /* Do not repeat the image */
+    background-image: url(/default_attributes/Static/starryBackground.jpg);
+    background-repeat: repeat;
     display:flex;
     background-color: black;
     background-size: contain;
@@ -31,7 +31,7 @@ body {
   height: 50px;
   margin: auto;
   margin-top: 5vh;
-  animation: spin .3s linear infinite;
+  animation: spin .2s linear infinite;
   display: block;
 }
 
@@ -103,6 +103,7 @@ main {
   opacity: 0%;
   transition: opacity 1000ms ease-in-out;
   pointer-events:none;
+  z-index: 3;
 }
 
 #ph-button:hover {
@@ -127,7 +128,7 @@ main {
   transition: all 250ms ease-in-out;
   pointer-events: none;
   margin-left: 4px;
-  z-index: 2;
+  z-index: 3;
 }
 
 #x-button {
@@ -149,7 +150,7 @@ main {
   height: 20px;
   bottom: 1%;
   left: 1%;
-  z-index: 1;
+  z-index: 3;
 }
 
 /* Hide default HTML checkbox */
@@ -210,7 +211,7 @@ footer {
   /* Set the fixed height of the footer here */
   height: 150px;
   background-color: rgba(0,5,20,200);
-  z-index: -1;
+  z-index: 3;
 }
 
 @keyframes fadeInAnimation {

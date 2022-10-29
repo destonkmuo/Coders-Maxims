@@ -1,0 +1,47 @@
+main {
+    height: 68vh;
+}
+
+#philosopherImg {
+    position: absolute;
+    width: 80%;
+    bottom: 10%;
+}
+
+#return {
+    position: absolute;
+    width: 100%;
+    top: 40%;
+    text-align: center;
+}
+
+#return h1 {
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding-bottom: 40px;
+    font-weight: 350;
+    text-shadow: 0 4px 8px rgba(0,0,0,1);
+}
+
+#return h2 {
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    text-shadow: 0 4px 8px rgba(0,0,0,1);
+}
+#return a {
+    color:black;
+    text-decoration: none;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    background-color: white;
+    border-radius: 15px;
+    padding: 10px;
+    font-weight: 300;
+    transition: all 500ms ease-in-out;
+    text-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+#return a:hover {
+    opacity: 70%;
+}

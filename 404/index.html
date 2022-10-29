@@ -1,41 +1,42 @@
 <!DOCTYPE html>
 <html lang="en-US">
    <head>
-      <title>Coders Maxims</title>
-      <link rel="stylesheet" href="/PageAttributes.css">
-      <link rel="stylesheet" href="Search.css">
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <link rel="icon" href="/Static/descartes.png">
+    <title>Coders Maxims</title>
+    <link rel="stylesheet" href="/default_attributes/PageAttributes.css">
+    <link rel="stylesheet" href="404.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="/default_attributes/Static/descartes.png">
    </head>
    <body>
     <main>
-      <div id="gsrc-background"></div>
-      <div id="gsrc-container"></div>
-      <div class="pagination"></div>
+      <img src="Static/socrates404.png" id="philosopherImg">
+      <div id="return">
+         <h2>Error 404: Page Not Found</h2>
+         <h1>"True knowledge exists in knowing that you know nothing."</h1>
+         <a href="/">Return Home</a>
+      </div>
     </main>
-    <header class="header">
+    <header>
         <nav>
          <div id="loading-window">
-            <img src="/Static/CodersMaximsLogo.png" id="loading-logo">
+            <img src="/default_attributes/Static/CodersMaximsLogo.png" id="loading-logo">
             <div class="loading-circle"></div>
          </div>
             <div id="ph">            
-                <button onclick="phContent()"><img src="/Static/homeGraphic.png" id="philosophic-helper"/></button>
+                <button onclick="phContent()"><img src="/default_attributes/Static/homeGraphic.png" id="philosophic-helper"/></button>
                 <div id="ph-content">
-                   <button id="x-button"onclick="closePHContent()"><img id="x-button" src="/Static/xbutton.png"></button>
+                   <button id="x-button"onclick="closePHContent()"><img id="x-button" src="/default_attributes/Static/xbutton.png"></button>
                 </div>
              </div>
             <label class="switch">
                 <input type="checkbox" checked id="phCheckBox" onclick="phLS()">
                 <span class="slider round"></span>
             </label>
-           <!-- When the user scrolls past a specified Height, instantiate this box -->
            <div id="nav-visibility-bar"></div>
-           <!-- Contains Home (Update Notes), Modules, Overview, Resources, Projects, References [API], About Me, Contact -->
            <ul class="nav-list">
-              <li class="nav-list-item"><a href="/"><img src="/Static/CodersMaximsLogo.png" id="HeaderLogo"></img></a></li>
+              <li class="nav-list-item"><a href="/"><img src="/default_attributes/Static/CodersMaximsLogo.png" id="HeaderLogo"></img></a></li>
               <li class="nav-list-item"><a href="/">Home</a></li>
               <li class="nav-list-item"><a href="#">Modules</a></li>
               <li class="nav-list-item"><a href="#">Overview</a></li>
@@ -43,26 +44,16 @@
               <li class="nav-list-item"><a href="#">Projects</a></li>
               <li class="nav-list-item"><a href="#">References</a></li>
               <li class="nav-list-item"><a href="#">Contact</a></li>
-              <!-- About Me As Well Included in Contact-->
               <li class="nav-list-item">
                  <div class="search-box" id="search-button">
-                    <button class="btn-search"><img src="/Static/SearchLogo.png" id="SearchLogo"></img></button>
+                    <button class="btn-search"><img src="/default_attributes/Static/SearchLogo.png" id="SearchLogo"></img></button>
                     <i class="fa fa-search"></i>
                     <input type="text" name="" id="input-search" onkeyup='Search()' placeholder="Search...">
                     <ul id="search-results-content">
-                       <!-- Example :<a href="Home.html" class="results-lists">Basic Computer History</a> -->
                     </ul>
-                    <!-- Search Results Content (10 at most)-->
-                 <!-- Alternating "Search... "[Module Names EX:If Loop]" randomly from the Module json, Deletes its self and replaces it by the character-->
                 </li>
-              <!-- A Search form [API]; Uses Users Key Terms and Compares them to A Database of Related Webpages(Modules + Nav Pages) (All Webpages Will Have a Set of Key Terms Related to Their Existence)-->
-           </ul>
- <!-- Outside of the dropdown-->
-           <!-- Add a helper bot that answers FAQ and sends emails -->
-           <!-- Could be annoying so make it very transparent untill hovered over -->
-           <!-- A one time greet that takes the user through the main page -->
+            </ul>
         </nav>
-        
      </header>
      
      <div class="low-nav-width-drop-down">
@@ -87,8 +78,6 @@
      </footer>
    </body>
 
-   
-   <!-- A template for Navigation Bar -->
    <script src="/JavaScript/LowNavWidth.js"></script>
    <script src="/JavaScript/Search.js"></script>
    <script src="/JavaScript/Misc.js"></script> 
@@ -96,5 +85,4 @@
    <script src="/JavaScript/philosophicHelper.js"></script>
    <script src="/JavaScript/loadingScreen.js"></script>
 
-   <script src="Javascript/globalSearch.js"></script>
 </html>

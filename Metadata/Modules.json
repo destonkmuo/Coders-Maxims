@@ -1,34 +1,34 @@
 [
     {
         "name":"Computer History",
-        "href":"/en-us/GlobalSearch/?search=computer history",
+        "href":"/s_dir/GlobalSearch/?search=computer history",
         "moduleIdentifier":"A002",
         "keyTerms":["binary"],
         "datePublished":"8/21/2022",
         "dateOfLastEdit":"8/21/2022",
-        "url":"/en-us/Modules/Computer-History/",
+        "url":"/s_dir/Modules/Computer-History/",
         "authors":"Deston Muo",
         "description":"Program is generally a computer program that ignores any input and outputs or displays a message similar to."
     },
     {
         "name":"Hello World",
-        "href":"/en-us/GlobalSearch/?search=hello world",
+        "href":"/s_dir/GlobalSearch/?search=hello world",
         "moduleIdentifier":"A001",
         "keyTerms":["hello","world","loops","loop","start","beginner","for loop"],
         "datePublished":"8/21/2022",
         "dateOfLastEdit":"8/21/2022",
-        "url":"/en-us/Modules/Hello-World/",
+        "url":"/s_dir/Modules/Hello-World/",
         "authors":"Deston Muo",
         "description":"Program is generally a computer program that ignores any input and outputs or displays a message similar to."
     },
     {
         "name":"Data Structures and Algorithms",
-        "href":"/en-us/GlobalSearch/?search=data structures and algorithms",
+        "href":"/s_dir/GlobalSearch/?search=data structures and algorithms",
         "moduleIdentifier":"A000",
         "keyTerms":["data","structure","algorithm"],
         "datePublished":"8/21/2022",
         "dateOfLastEdit":"8/21/2022",
-        "url":"/en-us/Modules/Data-Structures-And-Algorithms/",
+        "url":"/s_dir/Modules/Data-Structures-And-Algorithms/",
         "authors":"Deston Muo",
         "description":"Program is generally a computer program that ignores any input and outputs or displays a message similar to."
     } ,{ "name":"Data Structures and Algorithms 0" ,"href":"/en-us/GlobalSearch/?search=data structures and algorithms 0"},{ "name":"Data Structures and Algorithms 1" ,"href":"/en-us/GlobalSearch/?search=data structures and algorithms 1"},{ "name":"Data Structures and Algorithms 2" ,"href":"/en-us/GlobalSearch/?search=data structures and algorithms 2"},{ "name":"Data Structures and Algorithms 3" ,"href":"/en-us/GlobalSearch/?search=data structures and algorithms 3"},{ "name":"Data Structures and Algorithms 4" ,"href":"/en-us/GlobalSearch/?search=data structures and algorithms 4"},{ "name":"Data Structures and Algorithms 5" ,"href":"/en-us/GlobalSearch/?search=data structures and algorithms 5"},{ "name":"Data Structures and Algorithms 6" ,"href":"/en-us/GlobalSearch/?search=data structures and algorithms 6"},{ "name":"Data Structures and Algorithms 7" ,"href":"/en-us/GlobalSearch/?search=data structures and algorithms 7"},{ "name":"Data Structures and Algorithms 8" ,"href":"/en-us/GlobalSearch/?search=data structures and algorithms 8"},{ "name":"Data Structures and Algorithms 9" ,"href":"/en-us/GlobalSearch/?search=data structures and algorithms 9"},{ "name":"Data Structures and Algorithms 10" ,"href":"/en-us/GlobalSearch/?search=data structures and algorithms 10"},{ "name":"Data Structures and Algorithms 11" ,"href":"/en-us/GlobalSearch/?search=data structures and algorithms 11"},{ "name":"Data Structures and Algorithms 12" ,"href":"/en-us/GlobalSearch/?search=data structures and algorithms 12"},{ "name":"Data Structures and Algorithms 13" ,"href":"/en-us/GlobalSearch/?search=data structures and algorithms 13"},{ "name":"Data Structures and Algorithms 14" ,"href":"/en-us/GlobalSearch/?search=data structures and algorithms 14"},{ "name":"Data Structures and Algorithms 15" ,"href":"/en-us/GlobalSearch/?search=data structures and algorithms 15"},{ "name":"Data Structures and Algorithms 16" ,"href":"/en-us/GlobalSearch/?search=data structures and algorithms 16"},{ "name":"Data Structures and Algorithms 17" ,"href":"/en-us/GlobalSearch/?search=data structures and algorithms 17"},{ "name":"Data Structures and Algorithms 18" ,"href":"/en-us/GlobalSearch/?search=data structures and algorithms 18"},{ "name":"Data Structures and Algorithms 19" ,"href":"/en-us/GlobalSearch/?search=data structures and algorithms 19"},{ "name":"Data Structures and Algorithms 20" ,"href":"/en-us/GlobalSearch/?search=data structures and algorithms 20"},{ "name":"Data Structures and Algorithms 21" ,"href":"/en-us/GlobalSearch/?search=data structures and algorithms 21"},{ "name":"Data Structures and Algorithms 22" ,"href":"/en-us/GlobalSearch/?search=data structures and algorithms 22"},{ "name":"Data Structures and Algorithms 23" ,"href":"/en-us/GlobalSearch/?search=data structures and algorithms 23"},{ "name":"Data Structures and Algorithms 24" ,"href":"/en-us/GlobalSearch/?search=data structures and algorithms 24"},{ "name":"Data Structures and Algorithms 25" ,"href":"/en-us/GlobalSearch/?search=data structures and algorithms 25"},{ "name":"Data Structures and Algorithms 26" ,"href":"/en-us/GlobalSearch/?search=data structures and algorithms 26"},{ "name":"Data Structures and Algorithms 27" ,"href":"/en-us/GlobalSearch/?search=data structures and algorithms 27"},{ "name":"Data Structures and Algorithms 28" ,"href":"/en-us/GlobalSearch/?search=data structures and algorithms 28"},{ "name":"Data Structures and Algorithms 29" ,"href":"/en-us/GlobalSearch/?search=data structures and algorithms 29"}

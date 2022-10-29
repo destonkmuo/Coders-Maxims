@@ -3,17 +3,17 @@
    <head>
       <title>Coders Maxims</title>
       <link rel="stylesheet" href="Home.css">
-      <link rel="stylesheet" href="/PageAttributes.css">
+      <link rel="stylesheet" href="/default_attributes/PageAttributes.css">
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <link rel="icon" href="Static/descartes.png">
+      <link rel="icon" href="/default_attributes/Static/descartes.png">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
       <meta name="google-site-verification" content="Dm1nvgJ7w0kbvqWkDu6jWnFyMN87rbHtDD6P6_lSSEc"/>
    </head>
    <body>
       <main>
-         <img src="Static/blackHole.jpg" id="black-hole"/>
+         <img src="/Static/blackHole.jpg" id="black-hole"/>
          <div id="intro-view">
          <h1>Programming Fundamentals For All</h1>
          <p id="intro-view-p">Fostering New Principles And People</p>
@@ -32,24 +32,24 @@
 
             <div id="page-jumps">
                <button class="learn-page-jump" onclick="jumpTo('learn-container', 250)">
-                  <img src="Static/learnIcon.png">
+                  <img src="/default_attributes/Static/learnIcon.png">
                   <h2 id="pp">Learn</h2>
                   <h3>Self Paced Learning</h3>  
                   <p>Students may learn through the self guided modules or search for specific concepts to improve their knowledge of CS.</p>
                </button> 
                <button class="how-page-jump" onclick="jumpTo('page-jumps', 150)">
-                  <img src="Static/howIcon.png">
+                  <img src="/default_attributes/Static/howIcon.png">
                   <h2>How</h2>
                   <h3>Interactive Articles, Assignments, and Videos</h3>  
                   <P>Students will learn via the modules containing in-depth visualizations and explanations of CS concepts.</p></button>
                <button class="practice-page-jump" onclick="jumpTo('page-jumps', 150)">
-                  <img src="Static/practiceIcon.png">
+                  <img src="/default_attributes/Static/practiceIcon.png">
                   <h2>Practice</h2>
                   <h3>Assignments & Tests</h3>  
                   <P>Students will take EOM's, or end of module exams, that test their knowledge of the topic based on core fundamentals that are easily misconstrued.</p>
                </button>
                <button class="why-page-jump" onclick="jumpTo('page-jumps', 150)">
-                  <img src="Static/whyIcon.png">
+                  <img src="/default_attributes/Static/whyIcon.png">
                   <h2>Why</h2>
                   <h3>Why Was This Website Created</h3>  
                   <p>Learn why I decided to create this website and more about my endeavors and current résumé.</p>
@@ -71,22 +71,18 @@
          </div>
 
          <div id="learn-container">
-            <div id="learn-content"></div>
-            <img src="Static/horizon.png" id="horizon">
-            <img src="Static/computerScienceStudent.png" id="student-img">
-            <div id="end-of-container-strip"><p>Learn</p></div>
          </div>
       </main>
       <header>
          <nav>
             <div id="loading-window">
-               <img src="/Static/CodersMaximsLogo.png" id="loading-logo">
+               <img src="/default_attributes/Static/CodersMaximsLogo.png" id="loading-logo">
                <div class="loading-circle"></div>
             </div>
             <div id="ph">            
-               <div id="ph-button"><button onclick="phContent()"><img src="Static/philoHelper.png" id="philosophic-helper"/></button></div>
+               <div id="ph-button"><button onclick="phContent()"><img src="/default_attributes/Static/philoHelper.png" id="philosophic-helper"/></button></div>
                <div id="ph-content">
-                  <button id="x-button"onclick="closePHContent()"><img id="x-button" src="Static/xbutton.png"></button>
+                  <button id="x-button"onclick="closePHContent()"><img id="x-button" src="/default_attributes/Static/xbutton.png"></button>
                </div>
             </div>
             <label class="switch">
@@ -97,7 +93,7 @@
             <div id="nav-visibility-bar"></div>
             <!-- Contains Home (Update Notes), Modules, Overview, Resources, Projects, References [API], About Me, Contact -->
             <ul class="nav-list">
-               <li class="nav-list-item"><a href="/"><img src="Static/CodersMaximsLogo.png" id="HeaderLogo"></a></li>
+               <li class="nav-list-item"><a href="/"><img src="/default_attributes/Static/CodersMaximsLogo.png" id="HeaderLogo"></a></li>
                <li class="nav-list-item"><a href="/">Home</a></li>
                <li class="nav-list-item"><a href="#">Modules</a></li>
                <li class="nav-list-item"><a href="#">Overview</a></li>
@@ -108,7 +104,7 @@
                <!-- About Me As Well Included in Contact-->
                <li class="nav-list-item">
                   <div class="search-box" id="search-button">
-                     <button class="btn-search"><img src="Static/SearchLogo.png" id="SearchLogo"></img></button>
+                     <button class="btn-search"><img src="/default_attributes/Static/SearchLogo.png" id="SearchLogo"></img></button>
                      <i class="fa fa-search"></i>
                      <input type="text" name="" id="input-search" onkeyup='Search()' placeholder="Search...">
                      <ul id="search-results-content">
@@ -157,7 +153,6 @@
    <script src="/JavaScript/loadingScreen.js"></script>
 
    <script src="/HomeJavascript/homeSearch.js"></script>
-   <script src="/HomeJavascript/movingImages.js"></script>
    <script src="/HomeJavascript/recentModules.js"></script>
 
 </html>

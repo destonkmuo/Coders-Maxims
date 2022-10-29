@@ -14,7 +14,7 @@ function Search() {
     document.getElementById("input-search").addEventListener("keyup", function(event) {
         event.preventDefault();
         if (event.key === 'Enter' && input != "") {
-            window.location.href = `/en-us/GlobalSearch/?search=${input}`;
+            window.location.href = `/s_dir/GlobalSearch/?search=${input}`;
         }
     });
 
