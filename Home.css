@@ -393,11 +393,11 @@ main {
     outline-width: .8px;
     font-size: 27px;
     text-shadow: 0 4px 8px rgba(0,0,0,0.8);
-    border-radius: 15px;
+    border-radius: 10px;
     border-color: transparent;
-    padding: 0vw 15px;
+    padding: .1vw 1vw;
     transition: all 300ms ease-in-out;
-    width: 350px;
+    width: 325px;
     text-shadow: 0 4px 8px rgba(0,0,0,0.8);
 }
 
