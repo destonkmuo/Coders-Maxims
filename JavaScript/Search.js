@@ -25,7 +25,6 @@ function Search() {
             for (let modulesIndex = 0; modulesIndex < modules.length; modulesIndex++) {
                 
                 function instantiateResult() {
-                    while (searchResultsContent.firstChild) {searchResultsContent.removeChild(searchResultsContent.lastChild) }
                     var searchResult = document.createElement("a");
                     searchResult.innerHTML = `🔍︎ ${modules[modulesIndex].name}`;
                     searchResult.href = modules[modulesIndex].href;
