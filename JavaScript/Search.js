@@ -43,6 +43,8 @@ function Search() {
                 }
             }
 
+            console.log(results);
+
             function visibility(boolean) {
                 if (boolean) {
                     searchResultsContent.style.visibility = "visible";
