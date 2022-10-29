@@ -37,9 +37,11 @@ function Search() {
                     if(devLog) console.error(`Results Contains Space or Already Contains User Input... Resetting: ${results}`);
                     resetResults();
                 }  else if((modules[modulesIndex].name.toLowerCase().includes(input)) && input.length > 0 && results.size < 6) {
-                    if(devLog) console.log(`Found ${modules[modulesIndex].name}... Appending Potential href`) 
-                    results.add(modules[modulesIndex].href);
-                    instantiateResult();
+                    if(devLog) console.log(`Found ${modules[modulesIndex].name}... Appending Potential href`);
+                    if(!results.has(modules[modulesIndex].href)) {
+                        results.add(modules[modulesIndex].href);
+                        instantiateResult();
+                    }
                 }
             }
 
