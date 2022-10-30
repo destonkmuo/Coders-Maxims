@@ -106,6 +106,9 @@ main {
   z-index: 3;
 }
 
+#phb {
+  all: unset;
+}
 #ph-button:hover {
   opacity: 50%;
 }
