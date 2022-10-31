@@ -279,7 +279,7 @@ main {
     width: 60px;
     height: 60px;
     margin-left:85%;
-    position: relative;
+    display: inline;
 }
 
 #page-jumps h2 {
@@ -287,10 +287,8 @@ main {
 }
 
 #page-jumps h3 {
-    position:absolute;
-    padding: 50px 0px;
     font-size: 16px;
-    max-width: 30%;
+    max-width: 100%;
 }
 
 #page-jumps p {
@@ -411,14 +409,6 @@ main {
     position: absolute;
 }
 
-#student-img {
-    width:30%;
-    opacity:0%;
-    margin-left: 50%;
-    margin-top: 10vh;
-    transition: opacity 500ms ease-in-out;
-}
-
 #end-of-container-strip {
     width: 100%;
     height: 170px;
@@ -433,24 +423,4 @@ main {
     font-size: 13vh;
     margin-right: 5%;
     text-shadow: 0 4px 8px rgba(0,0,0,0.8);
-}
-
-#learn-content {
-    height: 80%;
-    width: 40%;
-    background-color:rgb(20,20,20);
-    border-radius: 15px;
-    left: 5vw;
-    top: 21%;
-    position: absolute;
-    z-index: 0;
-}
-
-#horizon {
-    width:50%;
-    position: absolute;
-    right: 5%;
-    margin-top: 35vh;
-    z-index: -1;
-    transition: opacity 500ms ease-in-out;
 }

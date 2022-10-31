@@ -1,48 +1,44 @@
 <!DOCTYPE html>
 <html lang="en-US">
    <head>
-    <title>404 | Coders Maxims</title>
-    <link rel="stylesheet" href="/default_attributes/PageAttributes.css">
-    <link rel="stylesheet" href="404.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="icon" href="/default_attributes/Static/codersmaximsicon.png">
+      <title>Template | Coders Maxims</title>
+      <link rel="stylesheet" href="/default_attributes/PageAttributes.css">
+      <link rel="stylesheet" href="index.css"> <!-- Name Of File Here-->
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <link rel="icon" href="/default_attributes/Static/codersmaximsicon.png">
    </head>
    <body>
     <main>
-      <img src="/404/Static/socrates404.png" id="philosopherImg">
-      <div id="return">
-         <h2>Error 404: Page Not Found</h2>
-         <h1>"True knowledge exists in knowing that you know nothing."</h1>
-         <a href="/">Return Home</a>
-      </div>
-      <footer>
-         <ul id="footer-list">
-            <li><a>Contact</a></li>
-            <li><a>References</a></li>
-            <li><a>Partners</a></li>
-            <li><a>Help</a></li>
-            <li><a>Sitemap</a></li>
-            <li><a href="/s_dir/PrivacyPolicy/">Privacy Policy</a></li>
-            <li><a></a></li>
-         </ul>
-           <a href="/"><img src="/default_attributes/Static/CodersMaximsLogo.png" id="footer-logo"></img></a>
-           <p>"Programming fundamentals for all."</p>
-        </footer>
+        <!-- Start Here -->
+        <footer>
+            <ul id="footer-list">
+               <li><a>Contact</a></li>
+               <li><a>References</a></li>
+               <li><a>Partners</a></li>
+               <li><a>Help</a></li>
+               <li><a>Sitemap</a></li>
+               <li><a href="/s_dir/PrivacyPolicy/">Privacy Policy</a></li>
+               <li><a></a></li>
+            </ul>
+              <a href="/"><img src="/default_attributes/Static/CodersMaximsLogo.png" id="footer-logo"></img></a>
+              <p>"Programming fundamentals for all."</p>
+           </footer>
     </main>
+    <!-- !!! START OF COPY !!! -->
     <header>
         <nav>
          <div id="loading-window">
             <img src="/default_attributes/Static/CodersMaximsLogo.png" id="loading-logo">
             <div class="loading-circle"></div>
          </div>
-            <div id="ph">            
-                <button onclick="phContent()"><img src="/default_attributes/Static/homeGraphic.png" id="philosophic-helper"/></button>
-                <div id="ph-content">
-                   <button id="x-button"onclick="closePHContent()"><img id="x-button" src="/default_attributes/Static/xbutton.png"></button>
-                </div>
-             </div>
+         <div id="ph">            
+            <div id="ph-button"><button onclick="phContent()" id="phb"><img src="/default_attributes/Static/philoHelper.png" id="philosophic-helper"/></button></div>
+            <div id="ph-content">
+               <button id="x-button"onclick="closePHContent()"><img id="x-button" src="/default_attributes/Static/xbutton.png"></button>
+            </div>
+         </div>
             <label class="switch">
                 <input type="checkbox" checked id="phCheckBox" onclick="phLS()">
                 <span class="slider round"></span>
@@ -65,13 +61,13 @@
                     <ul id="search-results-content">
                     </ul>
                 </li>
-            </ul>
+           </ul>
         </nav>
+        
      </header>
      
      <div class="low-nav-width-drop-down">
         <div id="drop-down-content">
-           <!-- Inside the actual drop down -->
            <ul class="low-width-nav-list">
               <li><a href="/">Home</a></li>
               <li><a href="#">Modules</a></li>
@@ -87,8 +83,8 @@
    </body>
 
    <script src="/default_attributes/JavaScript/LowNavWidth.js"></script>
-   <script src="/default_attributes/default_attributes/JavaScript/Search.js"></script>
-   <script src="/JavaScript/Misc.js"></script> 
+   <script src="/default_attributes/JavaScript/Search.js"></script>
+   <script src="/default_attributes/JavaScript/Misc.js"></script> 
    <script src="/default_attributes/JavaScript/pageJump.js"></script>
    <script src="/default_attributes/JavaScript/philosophicHelper.js"></script>
    <script src="/default_attributes/JavaScript/loadingScreen.js"></script>
