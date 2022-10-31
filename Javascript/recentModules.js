@@ -5,16 +5,19 @@ window.addEventListener('load', function() {
         .then(modules => {
             for(let i = 0; i < modules.length; i++) {
                 var rmListItemHyperLink = document.createElement('a');
-                rmListItemHyperLink.innerHTML = ` ~ ${modules[i].name} Created On ${modules[i].datePublished}.`;
+                rmListItemHyperLink.innerHTML = `${modules[i].name} ~ Created On ${modules[i].datePublished}  : `;
                 rmListItemHyperLink.href = modules[i].url;
                 document.body.appendChild(rmListItemHyperLink);
                 
                 var rmListItem = document.createElement('li');
                 rmListItem.className = "rm-list-item";
-                rmListItem.innerHTML = `${modules[i].moduleIdentifier}: ${modules[i].description}`;
+
+                var rmListDesc = this.document.createElement('p');
+                rmListDesc.innerHTML = `‎ ‎ ‎ ‎ ${modules[i].description}`;
                 
                 document.body.appendChild(rmListItem);
                 rmListItem.appendChild(rmListItemHyperLink);
+                rmListItem.appendChild(rmListDesc);
                 rmList.appendChild(rmListItem);
             }
         })
