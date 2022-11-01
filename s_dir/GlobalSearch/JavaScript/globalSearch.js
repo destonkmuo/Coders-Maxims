@@ -71,19 +71,22 @@ window.addEventListener('load', function() {
                     }
                 }
 
-                highlightHtml = '<span class="highlight">$1</span>';
-
-                for(let i = 0; i < usersQuery.length; i++) {
-                    $(function() {
-                        var term = usersQuery[i];
-                        var txt = $("p").html();
-                        if(term !== '') {
-                            txt = txt.replace(new RegExp('(' + term + ')', 'gi'), highlightHtml);
-                        }    
-                        $("p").html(txt);
-                });
+                if(results.length > 0) {
+                    for(let i = 0; i < usersQuery.length; i++) {
+                        $(function() {
+                            highlightHtml = '<span class="highlight">$1</span>';
+    
+                            var term = usersQuery[i];
+                            var txt = $("p").html();
+                            if(term !== '') {
+                                txt = txt.replace(new RegExp('(' + term + ')', 'gi'), highlightHtml);
+                            }    
+                            $("p").html(txt);
+                    });
+                    }
 
                 }
+
 
 
                 //12 max till paginated
