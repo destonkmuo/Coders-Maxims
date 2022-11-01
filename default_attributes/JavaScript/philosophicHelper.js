@@ -19,7 +19,7 @@ function phContent() {
     }
 }
 
-
+ 
 function closePHContent(){
     contentDiv.style.pointerEvents = "none";
     contentDiv.style.opacity = 0;

@@ -20,7 +20,7 @@ window.addEventListener('load', function() {
 
                 for (let modulesIndex = 0; modulesIndex < modules.length; modulesIndex++) {
 
-                    function instantiateResult() {
+                    function instantiateResult(highlight) {
                         if (urlCount <= 6) {
                             var searchResult = document.createElement("a");
                             searchResult.innerHTML = modules[modulesIndex].name;
@@ -36,6 +36,20 @@ window.addEventListener('load', function() {
                             document.body.appendChild(searchResultDescription);
                             document.getElementsByClassName(`global-search-results-content ${paginationCount}`)[0].appendChild(searchResultDescription);
                             urlCount += 1;
+
+                            var highlightRe = /<span class="highlight">(.*?)<\/span>/g,
+                            highlightHtml = '<span class="highlight">$1</span>';
+
+                            $(function() {
+                                    var term = highlight;
+                                    var txt = $("p").html().replace(highlightRe,'$1');
+                                    if(term !== '') {
+                                        txt = txt.replace(new RegExp('(' + term + ')', 'gi'), highlightHtml);
+                                    }    
+                                    $("p").html(txt);
+                                    console.log();    
+                            });
+
                         } else {
                             paginationCount += 1;
                             urlCount = 0;
@@ -55,19 +69,16 @@ window.addEventListener('load', function() {
                         if (devLog) console.error(`Users Query is Negligble or Already Contains User Input... Resetting: ${Array.from(results.values())}`)
                     } else if ((modules[modulesIndex].name.toLowerCase().includes(usersQuery.find(name => modules[modulesIndex].name.toLowerCase().includes(name)))) && usersQuery.length > 0) {
                         if (devLog) console.log(`Found from Name ${modules[modulesIndex].name}... Appending Potential href`)
-                        results.push(modules[modulesIndex]);
-                        results.push(modules[modulesIndex].name);
+                        results.push(modules[modulesIndex], modules[modulesIndex].name);
                         instantiateResult();
                     } else if (modules[modulesIndex].keyTerms.some(keyTerms => usersQuery.includes(keyTerms)) && usersQuery.length > 0) {
                         if (devLog) console.log(`Found from KeyTerms ${modules[modulesIndex].name}... Appending Potential href`)
-                        results.push(modules[modulesIndex]);
-                        results.push(modules[modulesIndex].name);
+                        results.push(modules[modulesIndex], modules[modulesIndex].name);
                         instantiateResult();
                     } else if ((modules[modulesIndex].description.toLowerCase().includes(usersQuery.find(desc => modules[modulesIndex].description.toLowerCase().includes(desc)))) && usersQuery.length > 0) {
                         if (devLog) console.log(`Found from Description ${modules[modulesIndex].name}... Appending Potential href`)
-                        results.push(modules[modulesIndex]);
-                        results.push(modules[modulesIndex].name);
-                        instantiateResult();
+                        results.push(modules[modulesIndex], modules[modulesIndex].name);
+                        instantiateResult(usersQuery.find(desc => modules[modulesIndex].description.toLowerCase().includes(desc)));
                     }
                 }
                 //12 max till paginated
