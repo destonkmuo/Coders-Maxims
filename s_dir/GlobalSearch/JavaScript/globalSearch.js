@@ -13,6 +13,7 @@ window.addEventListener('load', function() {
                 return data;
             }
 
+            var hightlight = [];
             var results = [];
             var urlCount = 0;
             var paginationCount = 0;
@@ -20,7 +21,7 @@ window.addEventListener('load', function() {
 
                 for (let modulesIndex = 0; modulesIndex < modules.length; modulesIndex++) {
 
-                    function instantiateResult(highlight) {
+                    function instantiateResult() {
                         if (urlCount <= 6) {
                             var searchResult = document.createElement("a");
                             searchResult.innerHTML = modules[modulesIndex].name;
@@ -36,19 +37,7 @@ window.addEventListener('load', function() {
                             document.body.appendChild(searchResultDescription);
                             document.getElementsByClassName(`global-search-results-content ${paginationCount}`)[0].appendChild(searchResultDescription);
                             urlCount += 1;
-
-                            var highlightRe = /<span class="highlight">(.*?)<\/span>/g,
-                            highlightHtml = '<span class="highlight">$1</span>';
-
-                            $(function() {
-                                    var term = highlight;
-                                    var txt = $("p").html().replace(highlightRe,'$1');
-                                    if(term !== '') {
-                                        txt = txt.replace(new RegExp('(' + term + ')', 'gi'), highlightHtml);
-                                    }    
-                                    $("p").html(txt);
-                                    console.log();    
-                            });
+                            // For Loop This as text being the found description
 
                         } else {
                             paginationCount += 1;
@@ -78,9 +67,25 @@ window.addEventListener('load', function() {
                     } else if ((modules[modulesIndex].description.toLowerCase().includes(usersQuery.find(desc => modules[modulesIndex].description.toLowerCase().includes(desc)))) && usersQuery.length > 0) {
                         if (devLog) console.log(`Found from Description ${modules[modulesIndex].name}... Appending Potential href`)
                         results.push(modules[modulesIndex], modules[modulesIndex].name);
-                        instantiateResult(usersQuery.find(desc => modules[modulesIndex].description.toLowerCase().includes(desc)));
+                        instantiateResult();
                     }
                 }
+
+                highlightHtml = '<span class="highlight">$1</span>';
+
+                for(let i = 0; i < usersQuery.length; i++) {
+                    $(function() {
+                        var term = usersQuery[i];
+                        var txt = $("p").html();
+                        if(term !== '') {
+                            txt = txt.replace(new RegExp('(' + term + ')', 'gi'), highlightHtml);
+                        }    
+                        $("p").html(txt);
+                });
+
+                }
+
+
                 //12 max till paginated
                 if (devLog) console.log(results);
                 var paginationDiv = this.document.getElementsByClassName('pagination');
