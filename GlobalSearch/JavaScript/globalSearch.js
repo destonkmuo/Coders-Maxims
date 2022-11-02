@@ -1,5 +1,5 @@
 window.addEventListener('load', function() {
-    fetch("/Metadata/Modules.json")
+    fetch("/default_attributes/Metadata/Modules.json")
         .then(response => response.json())
         .then(modules => {
             const devLog = true;

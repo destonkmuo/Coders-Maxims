@@ -15,11 +15,11 @@ function HomeSearch() {
     document.getElementById("home-input-search").addEventListener("keyup", function(event) {
         event.preventDefault();
         if (event.key === 'Enter' && input != "") {
-            window.location.href = `/s_dir/GlobalSearch/?search=${input}`;
+            window.location.href = `/GlobalSearch/?search=${input}`;
         }
     });
 
-    fetch("Metadata/Modules.json")
+    fetch("/default_attributes/Metadata/Modules.json")
         .then(response => response.json())
         .then(modules => {
             for (let modulesIndex = 0; modulesIndex < modules.length; modulesIndex++) {

@@ -1,36 +1,30 @@
 <!DOCTYPE html>
 <html lang="en-US">
    <head>
-      <title>Query | Coders Maxims</title>
+      <title>Template | Coders Maxims</title>
       <link rel="stylesheet" href="/default_attributes/PageAttributes.css">
-      <link rel="stylesheet" href="Search.css">
+      <link rel="stylesheet" href="index.css"> <!-- Name Of File Here-->
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <link rel="icon" href="/default_attributes/Static/codersmaximsicon.png">
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
    </head>
    <body>
     <main>
-      <div id="gsrc-background"></div>
-      <div id="gsrc-container">
-         <div id="global-search-results-content" class="global-search-results-content 0"></div>
-      </div>
-      <div class="pagination"></div>
-      <div id="return"></div>
-      <footer>
-         <ul id="footer-list">
-            <li><a>Contact</a></li>
-            <li><a>References</a></li>
-            <li><a>Partners</a></li>
-            <li><a>Help</a></li>
-            <li><a>Sitemap</a></li>
-            <li><a href="/s_dir/PrivacyPolicy/">Privacy Policy</a></li>
-            <li><a></a></li>
-         </ul>
-           <a href="/"><img src="/default_attributes/Static/CodersMaximsLogo.png" id="footer-logo"></img></a>
-           <h1>"Programming fundamentals for all."</h1>
-        </footer>
+        <!-- Start Here -->
+        <footer>
+            <ul id="footer-list">
+               <li><a>Contact</a></li>
+               <li><a>References</a></li>
+               <li><a>Partners</a></li>
+               <li><a>Help</a></li>
+               <li><a>Sitemap</a></li>
+               <li><a href="/s_dir/PrivacyPolicy/">Privacy Policy</a></li>
+               <li><a></a></li>
+            </ul>
+              <a href="/"><img src="/default_attributes/Static/CodersMaximsLogo.png" id="footer-logo"></img></a>
+              <p>"Programming fundamentals for all."</p>
+           </footer>
     </main>
     <!-- !!! START OF COPY !!! -->
     <header>
@@ -43,15 +37,32 @@
             <div id="ph-button"><button onclick="phContent()" id="phb"><img src="/default_attributes/Static/philoHelper.png" id="philosophic-helper"/></button></div>
             <div id="ph-content">
                <button id="x-button"onclick="closePHContent()"><img id="x-button" src="/default_attributes/Static/xbutton.png"></button>
+               <h1>Frequently Asked Questions</h1> <!-- Dedicated Page? -->
+               <div id="faq-1">
+                  <h2>Question</h2>
+                  <p>Answer</p>
+               </div>
+               <div id="faq-2">
+                  <h2>Question</h2>
+                  <p>Answer</p>
+               </div>
+               <div id="faq-3">
+                  <h2>Question</h2>
+                  <p>Answer</p>
+               </div>
+
+               <div id="question-not-answered">
+                  <a>More</a> <!-- Dedicated Page-->
+               </div>
+
+               <div id="Feedback"></div> <!-- Email Submission -->
             </div>
          </div>
             <label class="switch">
                 <input type="checkbox" checked id="phCheckBox" onclick="phLS()">
                 <span class="slider round"></span>
             </label>
-           <!-- When the user scrolls past a specified Height, instantiate this box -->
            <div id="nav-visibility-bar"></div>
-           <!-- Contains Home (Update Notes), Modules, Overview, Resources, Projects, References [API], About Me, Contact -->
            <ul class="nav-list">
               <li class="nav-list-item"><a href="/"><img src="/default_attributes/Static/CodersMaximsLogo.png" id="HeaderLogo"></img></a></li>
               <li class="nav-list-item"><a href="/">Home</a></li>
@@ -61,48 +72,34 @@
               <li class="nav-list-item"><a href="#">Projects</a></li>
               <li class="nav-list-item"><a href="#">References</a></li>
               <li class="nav-list-item"><a href="#">Contact</a></li>
-              <!-- About Me As Well Included in Contact-->
               <li class="nav-list-item">
                  <div class="search-box" id="search-button">
                     <button class="btn-search"><img src="/default_attributes/Static/SearchLogo.png" id="SearchLogo"></img></button>
                     <i class="fa fa-search"></i>
                     <input type="text" name="" id="input-search" onkeyup='Search()' placeholder="Search...">
                     <ul id="search-results-content">
-                       <!-- Example :<a href="Home.html" class="results-lists">Basic Computer History</a> -->
                     </ul>
-                    <!-- Search Results Content (10 at most)-->
-                 <!-- Alternating "Search... "[Module Names EX:If Loop]" randomly from the Module json, Deletes its self and replaces it by the character-->
                 </li>
-              <!-- A Search form [API]; Uses Users Key Terms and Compares them to A Database of Related Webpages(Modules + Nav Pages) (All Webpages Will Have a Set of Key Terms Related to Their Existence)-->
            </ul>
- <!-- Outside of the dropdown-->
-           <!-- Add a helper bot that answers FAQ and sends emails -->
-           <!-- Could be annoying so make it very transparent untill hovered over -->
-           <!-- A one time greet that takes the user through the main page -->
         </nav>
-        
      </header>
      
      <div class="low-nav-width-drop-down">
         <div id="drop-down-content">
-           <!-- Inside the actual drop down -->
            <ul class="low-width-nav-list">
-              <li><a href="/">Home</a></li>
-              <li><a href="#">Modules</a></li>
-              <li><a href="#">Overview</a></li>
-              <li><a href="#">Resources</a></li>
-              <li><a href="#">Projects</a></li>
-              <li><a href="#">References</a></li>
-              <li><a href="#">Contact</a></li>
+            <li class="nav-list-item"><a href="/">Home</a></li>
+            <li class="nav-list-item"><a href="/Modules/">Modules</a></li>
+            <li class="nav-list-item"><a href="/Overview/">Overview</a></li>
+            <li class="nav-list-item"><a href="/Resources/">Resources</a></li>
+            <li class="nav-list-item"><a href="/Projects/">Projects</a></li>
+            <li class="nav-list-item"><a href="/References/">References</a></li>
+            <li class="nav-list-item"><a href="/Contact/">Contact</a></li>
            </ul>
         </div>
         <span><button id="low-nav-width-btn">☰</button></span>
     </div>
-     <!-- !!! END OF COPY !!! -->
    </body>
 
-   
-   <!-- A template for Navigation Bar -->
    <script src="/default_attributes/JavaScript/LowNavWidth.js"></script>
    <script src="/default_attributes/JavaScript/Search.js"></script>
    <script src="/default_attributes/JavaScript/Misc.js"></script> 
@@ -110,5 +107,4 @@
    <script src="/default_attributes/JavaScript/philosophicHelper.js"></script>
    <script src="/default_attributes/JavaScript/loadingScreen.js"></script>
 
-   <script src="Javascript/globalSearch.js"></script>
 </html>

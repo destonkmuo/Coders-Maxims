@@ -1,6 +1,6 @@
 var rmList = document.getElementById('rm-list');
 window.addEventListener('load', function() {
-    fetch("/Metadata/Modules.json")
+    fetch("/default_attributes/Metadata/Modules.json")
         .then(response => response.json())
         .then(modules => {
             for(let i = modules.length - 1; i > modules.length - 10; i--) {
