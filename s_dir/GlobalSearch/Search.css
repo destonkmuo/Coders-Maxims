@@ -49,13 +49,13 @@
 
 .pagination {
     position: absolute;
-    top: 64%;
     width: 100%;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 200px;
+    margin-top: 83vh;
 }
 /* Pagination links */
 .pagination button {
