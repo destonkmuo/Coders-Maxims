@@ -99,6 +99,7 @@ window.addEventListener('load', function() {
                         paginationLink.innerHTML = i + 1;
                         paginationLink.className = "pageLink";
                         paginationLink.onclick = function pagination() {
+                            document.getElementById('gsrc-container').scrollTo(0,0);
 
                             document.querySelectorAll('.pageLink').forEach(pageLink => {
                                 pageLink.id = "not-active";

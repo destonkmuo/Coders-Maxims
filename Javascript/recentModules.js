@@ -3,7 +3,7 @@ window.addEventListener('load', function() {
     fetch("/Metadata/Modules.json")
         .then(response => response.json())
         .then(modules => {
-            for(let i = 0; i < modules.length; i++) {
+            for(let i = modules.length - 1; i > modules.length - 10; i--) {
                 var rmListItemHyperLink = document.createElement('a');
                 rmListItemHyperLink.innerHTML = `${modules[i].name} ~ Created On ${modules[i].datePublished}  : `;
                 rmListItemHyperLink.href = modules[i].url;
