@@ -10,14 +10,14 @@ window.onresize = window.onload = document.onmouseover = function() {
             width < 500 ? x = 0 : x = 1, navList[0].style.display = "block";
             for (let i = x; i < navList.length - 1; i++) {
                 navList[i].style.display = "none";
-                button.style.display = "block";
             }
+            button.style.display = "block";
             windowSubThresh = true;
         } else {
             for (let i = 0; i < navList.length - 1; i++) {
                 navList[i].style.display = "block";
-                button.style.display = "none";
             }
+            button.style.display = "none";
             windowSubThresh = false;
         }
     } 
