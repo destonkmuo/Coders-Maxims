@@ -18,7 +18,7 @@ function Search() {
         }
     });
 
-    fetch("/Metadata/Modules.json")
+    fetch("/default_attributes/Metadata/Modules.json")
         .then(response => response.json())
         .then(modules => {
 
@@ -37,7 +37,6 @@ function Search() {
 
                 if (results.has(modules[modulesIndex].href) || input == " ") {
                     if(devLog) console.error(`Results Contains Space or Already Contains User Input... Resetting: ${results}`);
-                    resetResults();
                 }  else if((modules[modulesIndex].name.toLowerCase().includes(input)) && input.length > 0 && results.size < 6) {
                     if(devLog) console.log(`Found ${modules[modulesIndex].name}... Appending Potential href`);
                     results.add(modules[modulesIndex].href);
