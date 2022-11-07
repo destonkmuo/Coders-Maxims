@@ -186,7 +186,7 @@ main {
 }
 
 #img2 {
-    width: 90%;
+    width: 80%;
     border-radius: 10px;
     box-shadow:0 3px 10px rgba(255,255,255,0.4);
 }
@@ -206,7 +206,6 @@ main {
 
 #lc-text {
     text-align: right;
-    margin-top: 10%;
 }
 
 .learn-page-jump {
