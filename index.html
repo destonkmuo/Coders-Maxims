@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
    <head>
-      <title>Home | Coders Maxims</title>
+      <title>Coders Maxims</title>
       <link rel="stylesheet" href="index.css">
       <link rel="stylesheet" href="/default_attributes/PageAttributes.css">
       <meta charset="UTF-8">
@@ -25,37 +25,40 @@
             <ul id="home-search-results-content"></ul>
          </div>
 
-         <button id="tutorial-button" onclick="jumpTo('page-jumps', 150)">Learn More</button>
+         <button id="tutorial-button" onclick="jumpTo('lc-div', -50)">Learn More</button>
 
-         <div id="page-jumps-container">
-            <div id="pj-text-container"><h4 id="page-jump-intro-text">Click A Tab To Navigate</h4></div>
-
-            <div id="page-jumps">
-               <button class="learn-page-jump" onclick="jumpTo('learn-container', 250)">
-                  <img src="/default_attributes/Static/learnIcon.png">
-                  <h2 id="pp">Learn</h2>
-                  <h3>Self Paced Learning</h3>  
-                  <p>Students may learn through the self guided modules or search for specific concepts to improve their knowledge of CS.</p>
-               </button> 
-               <button class="how-page-jump" onclick="jumpTo('page-jumps', 150)">
-                  <img src="/default_attributes/Static/howIcon.png">
-                  <h2>How</h2>
-                  <h3>Interactive Articles, Assignments, and Videos</h3>  
-                  <P>Students will learn via the modules containing in-depth visualizations and explanations of CS concepts.</p></button>
-               <button class="practice-page-jump" onclick="jumpTo('page-jumps', 150)">
-                  <img src="/default_attributes/Static/practiceIcon.png">
-                  <h2>Practice</h2>
-                  <h3>Assignments & Tests</h3>  
-                  <P>Students will take EOM's, or end of module exams, that test their knowledge of the topic based on core fundamentals that are easily misconstrued.</p>
-               </button>
-               <button class="why-page-jump" onclick="jumpTo('page-jumps', 150)">
-                  <img src="/default_attributes/Static/whyIcon.png">
-                  <h2>Why</h2>
-                  <h3>Why Was This Website Created</h3>  
-                  <p>Learn why I decided to create this website and more about my endeavors and current résumé.</p>
-               </button>
+         <div id="lc-div">
+            <div class="learn-containers">
+               <img src="Static/heart-shaped-code.jpg" id="img1"> <!-- Make Images That Are All The Same Size!!!!!-->
+               <div id="lc-text">
+                  <h1>Make Your Code Poetic</h1>
+                  <p>Some text expanding on this</p>
+               </div>
             </div>
+            <div class="learn-containers">
+               <img src="Static/organized-code.png" id="img2">
+               <div id="lc-text">
+                  <h1>Learn to Regulate Your Code as You Code</h1>
+                  <p>Some text expanding on this</p>
+               </div>
+            </div>
+            <div class="learn-containers">
+               <img src="Static/programming-maintenance.jpg" id="img3">
+               <div id="lc-text">
+                  <h1>Learn Concepts Such as Maintainability & Scalability</h1>
+                  <p>Some text expanding on this</p>
+               </div>
+            </div>
+            <div class="learn-containers">
+               <img src="Static/The+Importance+of+Connection.jpg" id="img4">
+               <div id="lc-text">
+                  <h1>Expand Your Knowledge With Me</h1>
+                  <p>Some text expanding on this</p>
+               </div>
+            </div>
+
          </div>
+
          <div id="content-feed">
             <div class="recent-modules">
                <div id="rm-tab">Website Updates</div>               
@@ -68,9 +71,6 @@
                <div id="twitter-feed"><a class="twitter-timeline" href="https://twitter.com/CodersMaxims?ref_src=twsrc%5Etfw"></a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div>
                <iframe class="yt-channel" src="https://www.youtube.com/embed/videoseries?list=PLU-mFGPI-GM5fzqgihbwV1EdMQheJx-oP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
-         </div>
-
-         <div id="learn-container">
          </div>
 
          <footer>
