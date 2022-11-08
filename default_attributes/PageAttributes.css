@@ -1,6 +1,5 @@
 html {
     position: relative;
-    min-height: 112%;
     scroll-behavior: smooth;
     overflow-x: hidden;
     background-color: black;
@@ -12,7 +11,6 @@ body {
     display:flex;
     background-size: contain;
     overflow-x: hidden;
-    min-height: 112%;
 }    
 
 #loading-window {
@@ -210,7 +208,6 @@ footer {
   position: absolute;
   bottom: -3%;
   width: 100%;
-  /* Set the fixed height of the footer here */
   z-index: 3;
 }
 

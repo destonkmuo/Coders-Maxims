@@ -1,0 +1,75 @@
+#modules-list {
+    margin-top: 20vh;
+    display: grid;
+    row-gap: 1vh;
+}
+
+@media (min-width: 500px) {
+    #modules-list { grid-template-columns: repeat(1,1fr); }
+}
+
+.units {
+    background-color:rgb(20,20,20);
+    box-shadow:0 4px 8px rgba(0,0,0,0.8);
+    width:80%;
+    height:8vh;
+    border-radius:10px;
+    margin-left: 50%;
+    -ms-transform: translateX(-50%);
+    -webkit-transform: translate(-50%,0%);
+    transform: translate(-50%, 0%);
+    text-align:center;
+    padding: 3px 10px;
+}
+
+.units:hover {
+    opacity: 90%;
+    width: 80%;
+    height: 100%;
+}
+
+#static-grid {
+    position: absolute;
+    width: 100%;
+    min-height: 112vh;
+}
+
+#unit-1:hover #u1-dropdown {
+    display: inline-block;
+    color: white;
+}
+
+#u1-dropdown {
+    display: none;
+    border-radius:5px;
+    text-decoration: none;
+    color: white;
+}
+
+#u1-dropdown ul {
+    text-decoration: none;
+    color: white;
+    list-style: none;
+}
+
+#u1-dropdown li a{
+    color: white;
+    text-decoration: none;
+    list-style: none;
+    opacity: 100%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 600;
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+
+#u1-dropdown li a:hover {
+    color: #8ab4f8;
+}
+
+
+p {
+    color: white;
+    font-size: 24px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
