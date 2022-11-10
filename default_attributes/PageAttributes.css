@@ -484,7 +484,7 @@ footer p {
   width: 300px;
   background-color: rgba(0,5,20,200);
   position: fixed;
-  border-radius: 10px;
+  border-radius: 0px 0px 10px 10px;
   pointer-events: none;
   visibility: hidden;
   opacity: 0;
