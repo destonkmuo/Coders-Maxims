@@ -505,8 +505,6 @@ footer p {
 #moduleslist {
   display: none;
   position: fixed;
-  background-color: black;
-  opacity: 90%;
   border-radius: 15px;
   row-gap: 8px;
   padding: 5px 0px;
