@@ -199,6 +199,20 @@ main {
     margin-right: 2%;
 }
 
+#discord-link {
+    width: 50%;
+    padding-top: 10%;
+    transition: all 500ms ease-in-out;
+}
+
+#discord-link:hover {
+    opacity: 50%;
+}
+
+.connect-link {
+    margin-top: 22% !important;
+}
+
 #home-search-box {
     margin-top: 4%;
 }
@@ -214,6 +228,7 @@ main {
     border-color: white;
     border-radius: 12px;
     left: 15.4%;
+    margin-top: 1%;
     padding: 0vw 15px;
     display: flex;
     justify-content: center;
@@ -225,8 +240,7 @@ main {
 }
 
 #home-input-search:focus{
-    border-radius: 15px;
-    border-color: rgba(255,255,255,0.25);
+    border-color: rgba(255,255,255,.1);
     transition: all 500ms ease-in-out;
 }
 
@@ -246,19 +260,20 @@ main {
 }
 
 #home-search-results-content {
-    width: 70%;
-    background-color: rgba(0,5,20,200);
+    width: 69.8%;
+    background-color: rgba(0,0,0,200);
     position: absolute;
-    border-radius: 10px;
+    border-radius: 0px 0px 10px 10px;
     pointer-events: none;
     visibility: hidden;
-    left: 15.4%;
+    left: 15.45%;
     padding: 0vw 15px;
     margin-top: 50px;
     opacity: 0;
     transition: all 250ms ease-in-out;
     outline-style:outset;
-    outline-color: white;
+    outline-color: rgba(255,255,255,0.4);
+    outline-width: .8px;
     z-index: 3;
 }
 #home-search-results-content a {
@@ -278,7 +293,7 @@ main {
 }
 
 #tutorial-button {
-    margin-top: 22.5vh;
+    margin-top: 20%;
     background-color:transparent;
     font-weight: bold;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -286,13 +301,13 @@ main {
     outline-style:outset;
     outline-color: white;
     outline-width: .8px;
-    font-size: 27px;
+    font-size: 120%;
     text-shadow: 0 4px 8px rgba(0,0,0,0.8);
     border-radius: 10px;
     border-color: transparent;
-    padding: .1vw 1vw;
+    padding: .1vw 0vw;
     transition: all 300ms ease-in-out;
-    width: 325px;
+    width: 20%;
     text-shadow: 0 4px 8px rgba(0,0,0,0.8);
 }
 

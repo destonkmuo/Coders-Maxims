@@ -482,7 +482,7 @@ footer p {
 
 #search-results-content {
   width: 300px;
-  background-color: rgba(0,5,20,200);
+  background-color: rgba(0,0,0,200);
   position: fixed;
   border-radius: 0px 0px 10px 10px;
   pointer-events: none;
@@ -490,7 +490,8 @@ footer p {
   opacity: 0;
   transition: opacity 250ms ease-in-out;
   outline-style:outset;
-  outline-color: white;
+  outline-color: rgba(255,255,255,0.5);
+  outline-width: .8px;
 }
 
 .results-lists {
