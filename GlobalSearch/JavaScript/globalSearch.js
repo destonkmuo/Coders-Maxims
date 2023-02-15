@@ -4,7 +4,9 @@ window.addEventListener('load', function() {
         .then(modules => {
             const devLog = true;
 
-            var usersQuery = decodeURIComponent(this.location.search.substring(1)).split()[0].replace('search=', '').split(' ');
+            var usersQuery = decodeURIComponent(this.location.search.substring(1)).split()[0].replace('search=', '').split(' ').sort((b, a) => a.length - b.length);
+
+            console.log(usersQuery);
 
             var getJSON = async url => {
                 const response = await fetch(url);
@@ -13,7 +15,6 @@ window.addEventListener('load', function() {
                 return data;
             }
 
-            var hightlight = [];
             var results = [];
             var urlCount = 0;
             var paginationCount = 0;
@@ -74,9 +75,9 @@ window.addEventListener('load', function() {
                 if(results.length > 0) {
                     for(let i = 0; i < usersQuery.length; i++) {
                         $(function() {
-                            highlightHtml = '<span class="highlight">$1</span>';
-    
+                            var highlightHtml = '<span class="highlight">$1</span>';
                             var term = usersQuery[i];
+
                             var txt = $("p").html();
                             if(term !== '') {
                                 txt = txt.replace(new RegExp('(' + term + ')', 'gi'), highlightHtml);
@@ -86,8 +87,6 @@ window.addEventListener('load', function() {
                     }
 
                 }
-
-
 
                 //12 max till paginated
                 if (devLog) console.log(results);
