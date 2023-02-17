@@ -268,7 +268,7 @@ main {
     visibility: hidden;
     left: 15.45%;
     padding: 0vw 15px;
-    margin-top: 50px;
+    margin-top: 60px;
     opacity: 0;
     transition: all 250ms ease-in-out;
     outline-style:outset;

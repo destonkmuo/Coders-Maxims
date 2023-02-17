@@ -71,16 +71,22 @@ window.addEventListener('load', function() {
                         instantiateResult();
                     }
                 }
-
                 if(results.length > 0) {
+                    let originalTxt = $("p").html();
                     for(let i = 0; i < usersQuery.length; i++) {
                         $(function() {
                             var highlightHtml = '<span class="highlight">$1</span>';
                             var term = usersQuery[i];
+                            console.log(term)
 
                             var txt = $("p").html();
                             if(term !== '') {
+                                console.log(originalTxt.toLowerCase().match(new RegExp('(' + term + ')', 'gi')))
                                 txt = txt.replace(new RegExp('(' + term + ')', 'gi'), highlightHtml);
+
+                                if(usersQuery.some(queryTerm => queryTerm.includes(term))) {
+                                    //console.log(usersQuery.filter(queryTerm => queryTerm.includes(term)))
+                                }
                             }    
                             $("p").html(txt);
                     });
