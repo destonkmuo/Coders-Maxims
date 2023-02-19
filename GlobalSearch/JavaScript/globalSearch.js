@@ -22,21 +22,28 @@ window.addEventListener('load', function() {
 
                 for (let modulesIndex = 0; modulesIndex < modules.length; modulesIndex++) {
 
-                    function instantiateResult() {
+                    function instantiateResult(foundFromName) {
+                        var searchResultsContent = document.getElementsByClassName(`global-search-results-content ${paginationCount}`)[0]
                         if (urlCount <= 6) {
                             var searchResult = document.createElement("a");
                             searchResult.innerHTML = modules[modulesIndex].name;
                             searchResult.href = modules[modulesIndex].url;
                             searchResult.className = "results-lists";
                             document.body.appendChild(searchResult);
-                            document.getElementsByClassName(`global-search-results-content ${paginationCount}`)[0].appendChild(searchResult);
 
                             var searchResultDescription = document.createElement('p');
                             searchResultDescription.innerHTML = modules[modulesIndex].description;
                             searchResultDescription.id = "searchResultDescription";
                             searchResultDescription.className = "results-lists";
                             document.body.appendChild(searchResultDescription);
-                            document.getElementsByClassName(`global-search-results-content ${paginationCount}`)[0].appendChild(searchResultDescription);
+
+                            if(!foundFromName) { //Pushes search results found from their names to the top
+                                searchResultsContent.appendChild(searchResult);
+                                searchResultsContent.appendChild(searchResultDescription);
+                            } else {
+                                searchResultsContent.insertBefore(searchResultDescription, searchResultsContent.firstChild);
+                                searchResultsContent.insertBefore(searchResult, searchResultsContent.firstChild);
+                            }
                             urlCount += 1;
                             // For Loop This as text being the found description
 
@@ -60,7 +67,7 @@ window.addEventListener('load', function() {
                     } else if ((modules[modulesIndex].name.toLowerCase().includes(usersQuery.find(name => modules[modulesIndex].name.toLowerCase().includes(name)))) && usersQuery.length > 0) {
                         if (devLog) console.log(`Found from Name ${modules[modulesIndex].name}... Appending Potential href`)
                         results.push(modules[modulesIndex], modules[modulesIndex].name);
-                        instantiateResult();
+                        instantiateResult(true);
                     } else if (modules[modulesIndex].keyTerms.some(keyTerms => usersQuery.includes(keyTerms)) && usersQuery.length > 0) {
                         if (devLog) console.log(`Found from KeyTerms ${modules[modulesIndex].name}... Appending Potential href`)
                         results.push(modules[modulesIndex], modules[modulesIndex].name);

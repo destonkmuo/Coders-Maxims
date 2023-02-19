@@ -263,12 +263,12 @@ main {
     width: 69.8%;
     background-color: rgba(0,0,0,200);
     position: absolute;
-    border-radius: 0px 0px 10px 10px;
+    border-radius: 10px;
     pointer-events: none;
     visibility: hidden;
     left: 15.45%;
     padding: 0vw 15px;
-    margin-top: 60px;
+    margin-top: 64px;
     opacity: 0;
     transition: all 250ms ease-in-out;
     outline-style:outset;
