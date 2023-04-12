@@ -71,7 +71,7 @@ function HomeSearch() {
   var arrOfWordsPostion = 0;
   var timeSpeed = 150;
   var arrOfWords = [["H","e","l","l","o"," ","W","o","r","l","d"," "," "," "],["A","l","g","o","r","i","t","h","m","s"," "," "," "],["D", "a", "t", "a"," ", "S", "t", "r", "u", "c", "t", "u", "r", "e","s"," "," "," "],["C", "o", "m", "p", "u", "t", "e", "r"," ", "H", "i", "s", "t", "o", "r", "y"," "," "," "]];
-  var interval = setInterval(function(){
+  setInterval(function(){
   document.getElementById("home-input-search").placeholder = `Search... ${currentString.join("")}`;
   
   if(arrOfWordsPostion == arrOfWords.length) {
