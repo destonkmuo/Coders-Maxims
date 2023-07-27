@@ -26,23 +26,21 @@
          }
          // Make sure the client is loaded and sign-in is complete before calling this method.
          function execute() {
-         return gapi.client.youtube.captions.list({
-         "part": [
-           "snippet"
-         ],
-         "videoId": "M7FIvfx5J10"
-         })
-           .then(function(response) {
-                   // Handle the results here (response.result has the parsed body).
-                   console.log("Response", response);
-                 },
-                 function(err) { console.error("Execute error", err); });
+           return gapi.client.youtube.captions.list({
+             "part": [
+               "snippet"
+             ],
+             "videoId": "M7FIvfx5J10"
+           })
+               .then(function(response) {
+                       // Handle the results here (response.result has the parsed body).
+                       console.log("Response", response);
+                     },
+                     function(err) { console.error("Execute error", err); });
          }
          gapi.load("client:auth2", function() {
-           gapi.auth2.init({client_id: "772830538444-96q0dqbjqtult71ga9glbbo29grl5tc2.apps.googleusercontent.com"});
+           gapi.auth2.init({client_id: "772830538444-tgme4jii72121a6j8k5663tlk3ao0rj2.apps.googleusercontent.com"});
          });
-
-         console.log(execute())
       </script>
       <button onclick="authenticate().then(loadClient)">authorize and load</button>
       <button onclick="execute()">execute</button>
