@@ -8,6 +8,7 @@
       <script>
 
             fetch('https://youtube.googleapis.com/youtube/v3/captions?part=snippet&videoId=M7FIvfx5J10&key=AIzaSyDYT9crIFi_OXGxtdr4gkfe2gRKykgFuyU').then(function(response) {
+                console.log(response)
             return response.json();
             }).then(function(data) {
             console.log(data);
