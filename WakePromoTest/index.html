@@ -20,7 +20,7 @@
         scope: 'https://www.googleapis.com/auth/youtube.force-ssl'
       }).then(() => {
         // After the client is loaded, fetch video transcripts
-        getVideoTranscript('VIDEO_ID');
+        getVideoTranscript(videoId);
       });
     });
 
