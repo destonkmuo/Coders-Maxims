@@ -7,19 +7,13 @@
       <script src="https://apis.google.com/js/api.js"></script>
       <script>
 
-        function httpGetAsync(theUrl, callback)
-        {
-            var xmlHttp = new XMLHttpRequest();
-            xmlHttp.onreadystatechange = function() { 
-                if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
-                console.log(xmlHttp.responseText)
-                    callback(xmlHttp.responseText);
-            }
-            xmlHttp.open("GET", 'https://youtube.googleapis.com/youtube/v3/captions?part=snippet&videoId=M7FIvfx5J10&key=[AIzaSyDYT9crIFi_OXGxtdr4gkfe2gRKykgFuyU]', true); // true for asynchronous 
-            xmlHttp.send(null);
-        }
+            fetch('https://youtube.googleapis.com/youtube/v3/captions?part=snippet&videoId=M7FIvfx5J10&key=AIzaSyDYT9crIFi_OXGxtdr4gkfe2gRKykgFuyU').then(function(response) {
+            return response.json();
+            }).then(function(data) {
+            console.log(data);
+            }).catch(function(err) {
+            console.log('Fetch Error :-S', err);
+            });
       </script>
-      <button onclick="authenticate().then(loadClient)">authorize and load</button>
-      <button onclick="execute()">execute</button>
    </body>
 </html>
