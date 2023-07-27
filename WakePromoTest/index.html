@@ -7,6 +7,44 @@
       <script src="https://apis.google.com/js/api.js"></script>
       <script>
 
+    const apiKey = 'AIzaSyDYT9crIFi_OXGxtdr4gkfe2gRKykgFuyU';
+    const videoId = 'M7FIvfx5J10'; // Replace with the ID of the YouTube video
+    // Fetch captions from YouTube Data API
+    // Load the client library
+    gapi.load('client', () => {
+      // Initialize the API client with OAuth2 credentials
+      gapi.client.init({
+        apiKey: 'AIzaSyDYT9crIFi_OXGxtdr4gkfe2gRKykgFuyU',
+        clientId: '772830538444-tgme4jii72121a6j8k5663tlk3ao0rj2.apps.googleusercontent.com',
+        discoveryDocs: ["https://www.googleapis.com/discovery/v1/apis/youtube/v3/rest"],
+        scope: 'https://www.googleapis.com/auth/youtube.force-ssl'
+      }).then(() => {
+        // After the client is loaded, fetch video transcripts
+        getVideoTranscript('VIDEO_ID');
+      });
+    });
+
+    function getVideoTranscript(videoId) {
+      gapi.client.youtube.captions.list({
+        videoId: videoId,
+        part: 'snippet'
+      }).then(response => {
+        const captionId = response.result.items[0].id;
+        gapi.client.youtube.captions.download({
+          id: captionId,
+          tfmt: 'ttml' // or 'srt' for SubRip format
+        }).then(downloadResponse => {
+          const transcript = downloadResponse.body;
+          // Process the transcript text
+          document.getElementById('transcript').textContent = transcript;
+        });
+      }).catch(error => {
+        console.error('Error:', error.message);
+      });
+
+      getVideoTranscript('M7FIvfx5J10')
+    }
+      /*
             fetch('https://youtube.googleapis.com/youtube/v3/captions?part=snippet&videoId=M7FIvfx5J10&key=AIzaSyDYT9crIFi_OXGxtdr4gkfe2gRKykgFuyU').then(function(response) {
                 console.log(response)
             return response.json();
@@ -15,6 +53,7 @@
             }).catch(function(err) {
             console.log('Fetch Error :-S', err);
             });
+            */
       </script>
    </body>
 </html>
