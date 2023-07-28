@@ -18,7 +18,7 @@ window.addEventListener('load', function() {
             var results = [];
             var urlCount = 0;
             var paginationCount = 0;
-            getJSON("https://raw.githubusercontent.com/6/stopwords-json/fca10ee6724fdfae58b9e72e43ac7d4a6ae9cd45/dist/en.json").then(data => {
+            getJSON("https://raw.githubusercontent.com/6/stopwords-json/fca10ee6724fdfae58b9e72e43ac7d4a6ae9cd45/dist/en.json").then(data => { //Bottom doesn't run otherwise, needs to change
 
                 for (let modulesIndex = 0; modulesIndex < modules.length; modulesIndex++) {
 
